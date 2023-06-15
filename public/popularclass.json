@@ -1,0 +1,179 @@
+[
+    {
+      "image": "https://i.ibb.co/Yj79yTq/janosch-diggelmann-i8-Xiab-UW3mw-unsplash.jpg",
+      "id": 1,
+      "category": "ball",
+      "name": "Yoga Panit",
+      "email": "yoga@example.com",
+      "students": 20,
+      "instructor": "John Doe",
+      "available_seat": 10,
+      "amount": 50.00
+    },
+    {
+      "image": "https://i.ibb.co/S0MGFWw/omar-ram-e-Eh-Oy-Et-BGMQ-unsplash.jpg",
+      "id": 2,
+      "category": "ball",
+      "name": "Zumba Bol",
+      "email": "zumba@example.com",
+      "students": 25,
+      "instructor": "Jane Smith",
+      "available_seat": 5,
+      "amount": 30.00
+    },
+    {
+      "image": "https://i.ibb.co/HY5C6Gm/david-clarke-DRt-Kiu-N9-Mk-unsplash.jpg",
+      "id": 3,
+      "category": "ball",
+      "name": "CrossFit Bedit",
+      "email": "crossfit@example.com",
+      "students": 15,
+      "instructor": "Mike Johnson",
+      "available_seat": 15,
+      "amount": 60.00
+    },
+    {
+      "image": "https://i.ibb.co/bgD4sVt/ruben-leija-Qlrcw3y-OKec-unsplash.jpg",
+      "id": 4,
+      "category": "ball",
+      "name": "Spinning ",
+      "email": "spinning@example.com",
+      "students": 12,
+      "instructor": "Sarah Davis",
+      "available_seat": 18,
+      "amount": 25.00
+    },
+    {
+        "image": "https://i.ibb.co/S0MGFWw/omar-ram-e-Eh-Oy-Et-BGMQ-unsplash.jpg",
+      "id": 5,
+      "category": "ball",
+      "name": "Pilates Klark",
+      "email": "pilates@example.com",
+      "students": 10,
+      "instructor": "David Brown",
+      "available_seat": 20,
+      "amount": 40.00
+    },
+    {
+      "image": "https://i.ibb.co/r3VMfmm/jannik-skorna-m-Y2-ZHBU6-GRk-unsplash.jpg",
+      "id": 6,
+      "category": "ball",
+      "name": "Cick pach",
+      "email": "cooking@example.com",
+      "students": 18,
+      "instructor": "Emily Wilson",
+      "available_seat": 2,
+      "amount": 55.00
+    },
+    {
+      "image": "painting_class.jpg",
+      "id": 7,
+      "category": "player",
+      "name": "Painting Class",
+      "email": "painting@example.com",
+      "students": 8,
+      "instructor": "Robert Lee",
+      "available_seat": 22,
+      "amount": 45.00
+    },
+    {
+      "image": "photography_class.jpg",
+      "id": 8,
+      "category": "player",
+      "name": "Photography Class",
+      "email": "photography@example.com",
+      "students": 30,
+      "instructor": "Jennifer Turner",
+      "available_seat": 0,
+      "amount": 75.00
+    },
+    {
+      "image": "martial_arts_class.jpg",
+      "id": 9,
+      "category": "player",
+      "name": "Martial Arts Class",
+      "email": "martialarts@example.com",
+      "students": 14,
+      "instructor": "Daniel Wilson",
+      "available_seat": 16,
+      "amount": 65.00
+    },
+    {
+      "image": "dance_class.jpg",
+      "id": 10,
+      "category": "bat",
+      "name": "Dance Class",
+      "email": "dance@example.com",
+      "students": 22,
+      "instructor": "Amy Johnson",
+      "available_seat": 8,
+      "amount": 35.00
+    },
+    {
+      "image": "guitar_class.jpg",
+      "id": 11,
+      "category": "bat",
+      "name": "Guitar Class",
+      "email": "guitar@example.com",
+      "students": 5,
+      "instructor": "Michael Smith",
+      "available_seat": 25,
+      "amount": 60.00
+    },
+    {
+      "image": "singing_class.jpg",
+      "id": 12,
+      "category": "bat",
+      "name": "Singing Class",
+      "email": "singing@example.com",
+      "students": 10,
+      "instructor": "Sophia Wilson",
+      "available_seat": 20,
+      "amount": 50.00
+    },
+    {
+      "image": "swimming_class.jpg",
+      "id": 13,
+      "category": "Swimming",
+      "name": "Swimming Class",
+      "email": "swimming@example.com",
+      "students": 15,
+      "instructor": "Jacob Brown",
+      "available_seat": 15,
+      "amount": 40.00
+    },
+    {
+      "image": "basketball_class.jpg",
+      "id": 14,
+      "category": "Basketball",
+      "name": "Basketball Class",
+      "email": "basketball@example.com",
+      "students": 12,
+      "instructor": "Olivia Johnson",
+      "available_seat": 18,
+      "amount": 30.00
+    },
+    {
+      "image": "writing_class.jpg",
+      "id": 15,
+      "category": "Writing",
+      "name": "Writing Class",
+      "email": "writing@example.com",
+      "students": 8,
+      "instructor": "Ethan Davis",
+      "available_seat": 22,
+      "amount": 45.00
+    },
+    {
+      "image": "pottery_class.jpg",
+      "id": 16,
+      "category": "Pottery",
+      "name": "Pottery Class",
+      "email": "pottery@example.com",
+      "students": 16,
+      "instructor": "Ava Smith",
+      "available_seat": 4,
+      "amount": 55.00
+    }
+  ]
+  
