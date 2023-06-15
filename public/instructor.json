@@ -1,5 +1,6 @@
 [
     {
+        "title":"Legends of the Lost Land",
         "image":"https://i.ibb.co/9TsBR2H/adria-crehuet-cano-ynd-HHu2k-JAw-unsplash.jpg",
         "id": 1,
         "name": "John Doe",
@@ -8,6 +9,7 @@
         "class": 1
     },
     {
+        "title":"Chronicles of the Realm",
         "image":"https://i.ibb.co/pLpMBfz/adria-crehuet-cano-LIh-B1-m-AGh-Y-unsplash-1.jpg",
         "id": 2,
         "name": "Olivia Clark",
@@ -16,7 +18,8 @@
         "class": 1
     },
     {
-        "image":"https://i.ibb.co/D9V1Y8z/chelsea-fern-r-M00daj2-Y-unsplash.jpg",
+        "title":"Secrets of the Timeless Sands",
+        "image":"https://i.ibb.co/FYy0MBj/istockphoto-1319763895-612x612.jpg",
         "id": 3,
         "name": "Matthew Anderson",
         "email": "matthewanderson@example.com",
@@ -24,6 +27,7 @@
         "class": 1
     },
     {
+        "title":"A Saga of Blood and Honor",
         "image":"https://i.ibb.co/FDXDRjW/elizeu-dias-2-EGNqazb-AMk-unsplash.jpg",
         "id": 5,
         "name": "Davi Johnson",
@@ -33,6 +37,7 @@
     },
   
     {
+        "title":"Unveiling the Magic Within",
         "image":"https://i.ibb.co/D1WGyd3/karelys-ruiz-F2-TQkun-F1a-U-unsplash.jpg",
         "id": 5,
         "name": "John Doe",
@@ -41,7 +46,8 @@
         "class": 1
     },
     {
-        "image":"https://i.ibb.co/T1661xV/jeffrey-f-lin-pa6j-D8bp6-CE-unsplash.jpg",
+        "title":"Quest for the Lost Oracle",
+        "image":"https://img.freepik.com/premium-photo/young-handsome-man-with-beard-isolated-keeping-arms-crossed-frontal-position_1368-132662.jpg",
         "id": 6,
         "name": "Daniel Taylor",
         "email": "'danieltaylor@example.com",
@@ -49,6 +55,7 @@
         "class": 1
     },
     {
+        "title":"Journey to the Forgotten Kingdom",
         "image":"https://i.ibb.co/d43xBsj/jacob-stephens-t8v-RE7-Qp-M2-M-unsplash.jpg",
         "id": 7,
         "name": "Sophia Brown",
@@ -57,6 +64,7 @@
         "class": 1
     },
     {
+        "title":"Tales of Celestial Enchantment",
         "image":"https://i.ibb.co/8DXhxV2/5a54b46ae1ef890343715c9743e58b790331c4d7.webp",
         "id": 8,
         "name": "Michael Wilson",
@@ -65,6 +73,7 @@
         "class": 1
     },
     {
+        "title":"Enchantments of the Mystical Isles",
         "image":"https://i.ibb.co/D1WGyd3/karelys-ruiz-F2-TQkun-F1a-U-unsplash.jpg",
         "id": 9,
         "name": "Emily Davis",

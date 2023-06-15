@@ -1,12 +1,15 @@
+import { createContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 
-const Navber = () => {
+const Navber = () => {  
+    const {user} = createContext(AuthContext)
 
     const navItem = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/instructor'>Instructor</Link></li>
-        <li><Link to='/class'>Class</Link></li>
+        <li><Link to='/classes'>Classes</Link></li>
         <li><Link to='/dashboard'>Dashboard</Link></li>
 
     </>
@@ -29,7 +32,11 @@ const Navber = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+              {
+              user ? 
+              <Link><button className="btn btn-error">Log Out</button></Link>:
+              <Link to='login'><button className="btn btn-success">Login</button></Link>
+              }
             </div>
         </div>
     );

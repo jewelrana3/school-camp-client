@@ -66,7 +66,7 @@
       "amount": 55.00
     },
     {
-      "image": "painting_class.jpg",
+      "image": "https://i.ibb.co/MChCkDp/alliance-football-club-g-Ou1-O7-Cyp-OY-unsplash.jpg",
       "id": 7,
       "category": "player",
       "name": "Painting Class",
@@ -77,7 +77,7 @@
       "amount": 45.00
     },
     {
-      "image": "photography_class.jpg",
+      "image": "https://i.ibb.co/4PgJRMC/alliance-football-club-x1-OStt-M2ajo-unsplash.jpg",
       "id": 8,
       "category": "player",
       "name": "Photography Class",
@@ -88,7 +88,7 @@
       "amount": 75.00
     },
     {
-      "image": "martial_arts_class.jpg",
+      "image": "https://i.ibb.co/yWwP4G8/alliance-football-club-l-ZZVq-ZAn-Gy0-unsplash.jpg",
       "id": 9,
       "category": "player",
       "name": "Martial Arts Class",
@@ -152,28 +152,7 @@
       "instructor": "Olivia Johnson",
       "available_seat": 18,
       "amount": 30.00
-    },
-    {
-      "image": "writing_class.jpg",
-      "id": 15,
-      "category": "Writing",
-      "name": "Writing Class",
-      "email": "writing@example.com",
-      "students": 8,
-      "instructor": "Ethan Davis",
-      "available_seat": 22,
-      "amount": 45.00
-    },
-    {
-      "image": "pottery_class.jpg",
-      "id": 16,
-      "category": "Pottery",
-      "name": "Pottery Class",
-      "email": "pottery@example.com",
-      "students": 16,
-      "instructor": "Ava Smith",
-      "available_seat": 4,
-      "amount": 55.00
     }
+    
   ]
   
