@@ -10,6 +10,7 @@ import SignUp from "../pages/SignUp/SignUp";
 import Instructor from "../pages/Instructor/Instructor";
 import InstructorAll from "../pages/InstructorAll/InstructorAll";
 import Classes from "../pages/Classes/Classes";
+// import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {

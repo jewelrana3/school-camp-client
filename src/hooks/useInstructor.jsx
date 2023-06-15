@@ -7,7 +7,6 @@ const useInstructor = () => {
         fetch('http://localhost:4000/instructor')
             .then(res => res.json())
             .then(data => {
-               console.log(data)
                 setInstructor(data)
             })
     }, [])

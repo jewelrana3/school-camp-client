@@ -16,7 +16,7 @@ const SocialLogin = () => {
                 console.log(result.user)
                 
                 navigate(from,{replace:true})
-            }).catch(error => console.log(error))
+            }).catch(error => console.log(error.message))
     }
     return (
         <div>
