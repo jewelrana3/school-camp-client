@@ -10,6 +10,8 @@ import SignUp from "../pages/SignUp/SignUp";
 import Instructor from "../pages/Instructor/Instructor";
 import InstructorAll from "../pages/InstructorAll/InstructorAll";
 import Classes from "../pages/Classes/Classes";
+import Dashboard from "../layout/Dashboard";
+import SelectClass from "../pages/Dashboard/SelectClass/SelectClass";
 // import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
@@ -41,6 +43,16 @@ const router = createBrowserRouter([
             {
                 path:'classes',
                 element:<Classes></Classes>
+            }
+        ]
+    },
+    {
+        path:'dashboard',
+        element:<Dashboard></Dashboard>,
+        children:[
+            {
+                path:'selectclass',
+                element:<SelectClass></SelectClass>
             }
         ]
     }

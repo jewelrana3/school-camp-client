@@ -1,10 +1,13 @@
 import {  useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
+import useCart from "../../../hooks/useCart";
 
 
 const Navber = () => {
-    const { user, logOut } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext);
+    const [cart] = useCart();
+    console.log(cart)
     console.log(user)
     const handleLogOut = () => {
         logOut()
@@ -16,7 +19,7 @@ const Navber = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/instructor'>Instructor</Link></li>
         <li><Link to='/classes'>Classes</Link></li>
-        <li><Link to='/dashboard'>Dashboard</Link></li>
+        <li><Link to='/dashboard/selectclass'>Dashboard {cart?.length || 0}</Link></li>
         
     </>
     return (
@@ -41,7 +44,7 @@ const Navber = () => {
 
                 {
                     user?.email ? <>
-                        <img src={user?.photoURL} alt="" />
+                        <img style={{width:'40px', borderRadius:'50%'}} src={user?.photoURL} alt="" />
                         <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
                     </> : <>
                         <Link to="/login" className="btn btn-error">Login</Link>
