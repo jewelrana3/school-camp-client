@@ -14,7 +14,7 @@ const ClassItem = ({ item }) => {
        
         console.log(item)
         if(user && user?.email){
-            const navItem = {classesId:name,instructor,amount,email:user?.email}
+            const navItem = {classesId:name,instructor,image,amount,email:user?.email}
             fetch('http://localhost:4000/cart',{
                 method:'POST',
                 headers:
