@@ -14,7 +14,9 @@ import Dashboard from "../layout/Dashboard";
 import SelectClass from "../pages/Dashboard/SelectClass/SelectClass";
 import EnrolledClass from "../pages/Dashboard/SelectClass/EnrolledClass/EnrolledClass";
 import PrivateRoute from "./PrivateRoute";
-// import PrivateRoute from "./PrivateRoute";
+import MyClasses from "../pages/Dashboard/MyClasses/MyClasses";
+
+
 
 const router = createBrowserRouter([
     {
@@ -54,13 +56,20 @@ const router = createBrowserRouter([
         children:[
             {
                 path:'selectclass',
-                element:<SelectClass></SelectClass>
+                element:<SelectClass></SelectClass>,
+                // loader:({params})=>fetch(`http://localhost:4000/popular/${params.id}`)
+             
             },
             {
-                path:'inrollclass',
-                element:<EnrolledClass></EnrolledClass>
+                path:'inrollclass/:id',
+                element:<EnrolledClass></EnrolledClass>,
+                loader:({params}) => fetch(`http://localhost:4000/popular/${params.id}`)
+            },
+            {
+                path:'myclass',
+                element:<MyClasses></MyClasses>
             }
-        ]
+        ]   
     }
 ])
 

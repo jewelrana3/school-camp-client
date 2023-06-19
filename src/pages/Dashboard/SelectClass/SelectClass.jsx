@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link,} from "react-router-dom";
 import useCart from "../../../hooks/useCart";
 // import { FaTrash } from "react-icons/fa";
 import Swal from "sweetalert2";
@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 
 const SelectClass = () => {
     const [cart,refetch] = useCart();
+    console.log(cart)
 
     const handleDelete = (item) => {
         Swal.fire({
@@ -36,7 +37,7 @@ const SelectClass = () => {
         })
     }
 
-
+   
     return (
         <div className="w-full">
             {/* <Helmet>
@@ -49,12 +50,13 @@ const SelectClass = () => {
                         <div className="card w-96 bg-base-100 shadow-xl ml-4">
                             <figure><img src={item.image} alt="Shoes" /></figure>
                             <div className="card-body">
-                                <h2 className="card-title">{item.classesId}</h2>
+                                <h2 className="card-title">{item.name}</h2>
                                 <p>Instructor: {item.instructor}</p>
                                 <p>fees:${item.amount}</p>
                                 <div className="card-actions justify-end">
                                     <button onClick={() => handleDelete(item)} className="btn btn-error">delete</button>
-                                   <Link to='/dashboard/inrollclass'> <button className="btn btn-primary">Enroll</button></Link>
+                                   <Link to={`/dashboard/inrollclass/${item.classesId}`}> <button className="btn btn-primary">Enroll</button></Link>
+                                   
                                 </div>
                             </div>
                         </div>

@@ -6,7 +6,7 @@ import useCart from "../../hooks/useCart";
 
 
 const ClassItem = ({ item }) => {
-    const { image, name, instructor, students, amount,available_seat} = item;
+    const { image, name, instructor, students, amount,available_seat,_id} = item;
     const {user} = useContext(AuthContext)
     const navigate = useNavigate();
     const [,refetch] = useCart();
@@ -14,7 +14,7 @@ const ClassItem = ({ item }) => {
        
         console.log(item)
         if(user && user?.email){
-            const navItem = {classesId:name,instructor,image,amount,email:user?.email}
+            const navItem = {classesId:_id,name,instructor,image,amount,email:user?.email}
             fetch('http://localhost:4000/cart',{
                 method:'POST',
                 headers:
@@ -27,6 +27,7 @@ const ClassItem = ({ item }) => {
             .then(res=>res.json())
             .then(data=>{
                 if(data.insertedId){
+                    console.log(data)
                     refetch();
                     Swal.fire({
                         position: 'top-end',

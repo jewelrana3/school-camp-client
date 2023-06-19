@@ -1,4 +1,4 @@
-import {  useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
 import useCart from "../../../hooks/useCart";
@@ -7,7 +7,7 @@ import useCart from "../../../hooks/useCart";
 const Navber = () => {
     const { user, logOut } = useContext(AuthContext);
     const [cart] = useCart();
-   
+
     const handleLogOut = () => {
         logOut()
             .then(() => { })
@@ -15,12 +15,13 @@ const Navber = () => {
     }
 
     const navItem = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/instructor'>Instructor</Link></li>
-        <li><Link to='/classes'>Classes</Link></li>
-        <li><Link to='/dashboard/selectclass'>Dashboard {cart?.length || 0}</Link></li>
-        
-    </>
+    <li><Link to='/'>Home</Link></li>
+    <li><Link to='/instructor'>Instructor</Link></li>
+    <li><Link to='/classes'>Classes</Link></li>
+    <li><Link to='/dashboard/selectclass'>Dashboard {cart?.length || 0}</Link></li>
+
+</>
+
     return (
         <div className="navbar bg-slate-400">
             <div className="navbar-start">
@@ -34,16 +35,16 @@ const Navber = () => {
                 </div>
                 <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
             </div>
+           
+            <div className="navbar-end">
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {navItem}
                 </ul>
             </div>
-            <div className="navbar-end">
-
                 {
                     user?.email ? <>
-                        <img style={{width:'40px', borderRadius:'50%'}} src={user?.photoURL} alt="" />
+                        <img style={{ width: '40px', borderRadius: '50%' }} src={user?.photoURL} alt="" />
                         <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
                     </> : <>
                         <Link to="/login" className="btn btn-error">Login</Link>
