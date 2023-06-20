@@ -1,37 +1,37 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import SocialLogin from "../shared/SocialLogin/SocialLogin";
-
+import { FaEye } from 'react-icons/fa';
 
 const Login = () => {
 
 
 
-    const {singIn} = useContext(AuthContext)
-    
+    const { singIn } = useContext(AuthContext)
+    const [show, setShow] = useState(false)
     const location = useLocation()
     const navigate = useNavigate()
     const from = location.state?.from?.pathname || '/'
 
-    const handleLogin=event=>{
+    const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
-       
+
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email,password);
+        console.log(email, password);
 
         singIn(email, password)
-        .then(result => {
-            const user = result.user;
-            console.log(user);
-           
-            navigate(from, { replace: true })
-           
-        })
-        .catch(error => console.log(error));
-}
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+
+                navigate(from, { replace: true })
+
+            })
+            .catch(error => console.log(error));
+    }
 
 
     return (
@@ -51,13 +51,19 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" placeholder="password" name='password' className="input input-bordered" />
+                               <p className="flex"> <input type={show ? "text" : "password"} placeholder="password" name='password'   className="input input-bordered"/><FaEye onClick={()=>setShow(!show)}   className="ml-96 mt-6 absolute"></FaEye></p>
+                                {/* <p onClick={() => setShow(!show)}>
+                                    <small> {
+                                        show ? <span>hide password</span> : <span>show password</span>
+                                    }</small>
+                                </p> */}
+
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                               
+
                                 <input className="btn btn-primary" type="submit" value="Login" />
                             </div>
                         </form>

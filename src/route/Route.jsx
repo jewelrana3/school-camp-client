@@ -23,7 +23,7 @@ import Image from "../pages/Image/Image";
 const router = createBrowserRouter([
     {
         path:'/',
-        element:<Main></Main>,
+        element:<Main ></Main>,
         errorElement:<ErrorPage></ErrorPage>,
         children:[
             {

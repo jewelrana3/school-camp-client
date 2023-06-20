@@ -2,11 +2,24 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
 import useCart from "../../../hooks/useCart";
+import { FaMoon,FaCentos } from 'react-icons/fa';
 
 
-const Navber = () => {
+const Navber = ({ color, setColor }) => {
     const { user, logOut } = useContext(AuthContext);
     const [cart] = useCart();
+
+    const handleColor = () => {
+        
+        if (color == "light") {
+            setColor("dark")
+           
+        }
+        else {
+            setColor("light")
+           
+        }
+    }
 
     const handleLogOut = () => {
         logOut()
@@ -15,13 +28,15 @@ const Navber = () => {
     }
 
     const navItem = <div className="navItem flex">
-    <li><NavLink to='/'>Home</NavLink></li>
-    <li><NavLink to='/instructor'>Instructor</NavLink></li>
-    <li><NavLink to='/classes'>Classes</NavLink></li>
-    <li><NavLink to='/dashboard/selectclass'>Dashboard</NavLink></li>
-    
 
-</div>
+        <li> <NavLink className='mr-6 text-xl' onClick={handleColor}>{color ?<FaMoon></FaMoon>:<FaCentos></FaCentos>}</NavLink></li>
+        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/instructor'>Instructor</NavLink></li>
+        <li><NavLink to='/classes'>Classes</NavLink></li>
+        <li><NavLink to='/dashboard/selectclass'>Dashboard</NavLink></li>
+
+
+    </div>
 
     return (
         <div className="navbar bg-slate-600 fixed z-10 max-w-screen-xl mx-auto opacity-80 text-white">
@@ -36,13 +51,13 @@ const Navber = () => {
                 </div>
                 <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
             </div>
-           
+
             <div className="navbar-end">
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    {navItem}
-                </ul>
-            </div>
+                <div className="navbar-center hidden lg:flex">
+                    <ul className="menu menu-horizontal px-1">
+                        {navItem}
+                    </ul>
+                </div>
                 {
                     user?.email ? <>
                         <img title={user?.displayName} style={{ width: '40px', borderRadius: '50%' }} src={user?.photoURL} alt="" />
