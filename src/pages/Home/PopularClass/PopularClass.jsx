@@ -13,13 +13,13 @@ const PopularClass = () => {
             })
     }, [])
     return (
-        <div className="mt-32 bg-slate-200 px-2 pr-11 py-4">
+        <div className="mt-32 bg-slate-200 px-2  pr-11 py-4">
             <div className="text-center  mb-16">
                 <h2 className="text-3xl font-bold ">Popular <span className="text-cyan-400">Class</span></h2>
                 <p>The truth is that it certainly can be, assuming you are using the right application to help you get there!</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
                 {
                     popular.map(item => <div key={item.id} style={{ width: '22rem' }} className="card card-compact w-96 bg-base-100 shadow-xl">
                         <figure><img src={item.image} alt="Shoes" /></figure>

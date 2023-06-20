@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
 import useCart from "../../../hooks/useCart";
 
@@ -14,17 +14,17 @@ const Navber = () => {
             .then(error => console.log(error))
     }
 
-    const navItem = <>
-    <li><Link to='/'>Home</Link></li>
-    <li><Link to='/instructor'>Instructor</Link></li>
-    <li><Link to='/classes'>Classes</Link></li>
-    <li><Link to='/dashboard/selectclass'>Dashboard</Link></li>
+    const navItem = <div className="navItem flex">
+    <li><NavLink to='/'>Home</NavLink></li>
+    <li><NavLink to='/instructor'>Instructor</NavLink></li>
+    <li><NavLink to='/classes'>Classes</NavLink></li>
+    <li><NavLink to='/dashboard/selectclass'>Dashboard</NavLink></li>
     
 
-</>
+</div>
 
     return (
-        <div className="navbar bg-slate-600 fixed z-10 max-w-screen-xl mx-auto text-white">
+        <div className="navbar bg-slate-600 fixed z-10 max-w-screen-xl mx-auto opacity-80 text-white">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -48,7 +48,7 @@ const Navber = () => {
                         <img title={user?.displayName} style={{ width: '40px', borderRadius: '50%' }} src={user?.photoURL} alt="" />
                         <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
                     </> : <>
-                        <Link to="/login" className="btn btn-error">Login</Link>
+                        <NavLink to="/login" className="btn btn-error">Login</NavLink>
                     </>
                 }
             </div >

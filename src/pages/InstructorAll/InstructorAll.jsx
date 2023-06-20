@@ -4,9 +4,9 @@ import useInstructor from "../../hooks/useInstructor";
 const InstructorAll = () => {
     const [instructor] = useInstructor([]);
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-40 mb-28">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-28  mb-28">
                 {
-                    instructor.map(item => <div key={item.id} className="card card-compact w-96 bg-base-100 shadow-xl">
+                    instructor.map(item => <div style={{width:'23rem'}} key={item.id} className="card card-compact w-96 bg-base-100 shadow-xl">
                         <figure><img src={item.image} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title"> {item.name}</h2>

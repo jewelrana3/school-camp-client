@@ -8,3 +8,8 @@
   .drawer-side a {
     background-color: transparent;
   }
+
+  .navItem a.active {
+    background-color: rgb(87, 94, 13);
+    
+  }
