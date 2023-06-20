@@ -2,9 +2,10 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
 import useAuth from "../../../../hooks/useAuth";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
+import './CheakOut.css'
+import moment from "moment/moment";
 
-
-const CheakOut = ({ price,cart }) => {
+const CheakOut = ({ price, cart,image,instructor }) => {
     const stripe = useStripe();
     const elements = useElements();
     const [axiosSecure] = useAxiosSecure();
@@ -12,7 +13,7 @@ const CheakOut = ({ price,cart }) => {
     const [error, setError] = useState('')
     const [clientSecret, setClientSecret] = useState('');
     const [proccess, setProccess] = useState(false);
-    const [transactionId,setTransactionId] = useState('')
+    const [transactionId, setTransactionId] = useState('')
 
 
 
@@ -67,24 +68,26 @@ const CheakOut = ({ price,cart }) => {
         setProccess(false)
         if (paymentIntent.status === "succeeded") {
             setTransactionId(paymentIntent.id)
+            
             const payment = {
                 email: user?.email,
-                transactionId: transactionId.id,
+                transactionId: paymentIntent.id,
                 price,
-                quantity: cart.length,
-                date: new Date(),
+                instructor,
+                image,
+                date:new Date(),
                 cartItems: cart.map(item => item._id),
-                menuItem: cart.map(item => item.menuItem),
+                classesId: cart.map(item => item.classesId),
                 itemsName: cart.map(item => item.name),
                 // status: 'service pending'
             }
-            axiosSecure.post('/payment',payment)
-            .then(res => {
-                console.log(res.data)
-                if(res.data.insertedId){
-                    // d
-                }
-            })
+            axiosSecure.post('/payment', payment)
+                .then(res => {
+                    console.log(res.data)
+                    if (res.data.insertedId) {
+                        // d
+                    }
+                })
         }
     }
 

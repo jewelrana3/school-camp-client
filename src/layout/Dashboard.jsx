@@ -22,7 +22,7 @@ const DashBoard = () => {
                   
                     <li><NavLink to="/dashboard/selectclass"> <FaUtensils></FaUtensils>Select Classes</NavLink></li>
                     <li><NavLink to="/dashboard/myclass"><FaWallet></FaWallet>My Classes</NavLink></li>
-                    <li><NavLink to="/dashboard/payment-history"><FaBook></FaBook>Payment History</NavLink></li>
+                    <li><NavLink to="/dashboard/history"><FaBook></FaBook>Payment History</NavLink></li>
                    
                     <div className="divider"></div>
                     <li><NavLink to="/"><FaHome></FaHome> Home</NavLink> </li>

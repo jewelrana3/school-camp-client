@@ -7,7 +7,7 @@ const Classes = () => {
     
     return (
        
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-40 mb-28 ">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-16  mb-28 ">
                 {
                 classes.slice(0,9).map(item => <ClassItem
                 key={item._id}

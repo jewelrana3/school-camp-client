@@ -28,31 +28,11 @@ const EnrolledClass = () => {
                     <span >Price $: {amount}</span>
                     <div style={{ width: '450px' }} className="-ml-8">
                         <Elements stripe={stripePromise}>
-                            <CheakOut price={price} cart={cart}/>
+                            <CheakOut price={price} cart={cart} image={image} instructor={instructor}/>
                         </Elements>
                     </div>
                 </div>
             </div>
-            {/* <div>
-                {
-                    s.map( => <div key={._id} className="card card-side bg-base-100 shadow-xl">
-                    <figure><img style={{ width: '300px', height:'100%' }} src={.image} alt="Movie" /></figure>
-                    <div className="card-body">
-                        <h2 className="text-3xl font-semibold">Inrolled class</h2>
-                        <h2 className="card-title">{.classesId}</h2>
-                        <span >Instructor: {.instructor}</span>
-                        <span >Price $: {.amount}</span>
-                        <div style={{width:'450px'}} className="-ml-8">
-                            <Elements stripe={stripePromise}>
-                                <CheakOut />
-                            </Elements>
-                        </div>
-                    </div>
-                </div>)
-                }
-                
-
-            </div> */}
         </div>
     );
 };

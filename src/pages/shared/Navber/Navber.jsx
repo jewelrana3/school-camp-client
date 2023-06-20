@@ -18,12 +18,13 @@ const Navber = () => {
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/instructor'>Instructor</Link></li>
     <li><Link to='/classes'>Classes</Link></li>
-    <li><Link to='/dashboard/selectclass'>Dashboard {cart?.length || 0}</Link></li>
+    <li><Link to='/dashboard/selectclass'>Dashboard</Link></li>
+    
 
 </>
 
     return (
-        <div className="navbar bg-slate-400">
+        <div className="navbar bg-slate-600 fixed z-10 max-w-screen-xl mx-auto text-white">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -44,7 +45,7 @@ const Navber = () => {
             </div>
                 {
                     user?.email ? <>
-                        <img style={{ width: '40px', borderRadius: '50%' }} src={user?.photoURL} alt="" />
+                        <img title={user?.displayName} style={{ width: '40px', borderRadius: '50%' }} src={user?.photoURL} alt="" />
                         <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
                     </> : <>
                         <Link to="/login" className="btn btn-error">Login</Link>

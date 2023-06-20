@@ -15,6 +15,8 @@ import SelectClass from "../pages/Dashboard/SelectClass/SelectClass";
 import EnrolledClass from "../pages/Dashboard/SelectClass/EnrolledClass/EnrolledClass";
 import PrivateRoute from "./PrivateRoute";
 import MyClasses from "../pages/Dashboard/MyClasses/MyClasses";
+import History from "../pages/Dashboard/History/History";
+import Image from "../pages/Image/Image";
 
 
 
@@ -47,6 +49,10 @@ const router = createBrowserRouter([
             {
                 path:'classes',
                 element:<Classes></Classes>
+            },
+            {
+                path:'image',
+                element:<Image></Image>
             }
         ]
     },
@@ -68,6 +74,10 @@ const router = createBrowserRouter([
             {
                 path:'myclass',
                 element:<MyClasses></MyClasses>
+            },
+            {
+                path:'history',
+                element:<History></History>
             }
         ]   
     }
