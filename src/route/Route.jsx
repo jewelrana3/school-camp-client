@@ -17,6 +17,10 @@ import PrivateRoute from "./PrivateRoute";
 import MyClasses from "../pages/Dashboard/MyClasses/MyClasses";
 import History from "../pages/Dashboard/History/History";
 import Image from "../pages/Image/Image";
+import AddClass from "../pages/Dashboard/InstructorDash/AddClass/AddClass";
+// import AddClass from "../pages/Dashboard/InstructorDash/AddClass/AddClass";
+// import InstructorDash from "../pages/Dashboard/InstructorDash/InstructorDash";
+
 
 
 
@@ -62,8 +66,8 @@ const router = createBrowserRouter([
         children:[
             {
                 path:'selectclass',
-                element:<SelectClass></SelectClass>,
-                // loader:({params})=>fetch(`http://localhost:4000/popular/${params.id}`)
+                element:<SelectClass></SelectClass>
+               
              
             },
             {
@@ -78,7 +82,12 @@ const router = createBrowserRouter([
             {
                 path:'history',
                 element:<History></History>
-            }
+            },
+           {
+            path:'addclass',
+            element:<AddClass></AddClass>
+           }
+    
         ]   
     }
 ])

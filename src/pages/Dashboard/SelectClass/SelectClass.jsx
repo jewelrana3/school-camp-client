@@ -41,7 +41,7 @@ const SelectClass = () => {
     return (
         <div className="w-full">
             {/* <Helmet>
-            <title>Bistro Boss | My Cart</title>
+            <title>| My Cart</title>
         </Helmet> */}
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">

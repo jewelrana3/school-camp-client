@@ -1,0 +1,23 @@
+// import { toast } from "react-hot-toast"
+
+// // save to user database
+// export const saveUser = user =>{
+//     const currentUser = {
+//         email:user.email,
+//     }
+//     fetch(`http://localhost:4000/users/${user?.email}`,{
+//         method:'PUT',   
+//         headers:{
+//             'content-type':'application/json'
+//         },
+//         body:JSON.stringify(currentUser)
+//     })
+//     .then(res => res.json())
+//     .then(data => {
+//         if(data.inserted){
+//             toast('Sign Up Successfully')
+//         }
+//     })
+
+   
+// }

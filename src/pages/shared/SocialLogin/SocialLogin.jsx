@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
 
+import { toast } from "react-hot-toast";
+
 
 
 const SocialLogin = () => {
@@ -13,10 +15,21 @@ const SocialLogin = () => {
     const handleGoogleLogin = () => {
         signInGoogle()
             .then(result => {
-                console.log(result.user)
-                
-                navigate(from,{replace:true})
-            }).catch(error => console.log(error.message))
+                const loggedInUser = result.user;
+                console.log(loggedInUser);
+                const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email,role:'student' }
+                fetch('http://localhost:4000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(saveUser)
+                })
+                    .then(res => res.json())
+                    .then(() => {
+                        navigate(from, { replace: true });
+                    })
+            })
     }
     return (
         <div>

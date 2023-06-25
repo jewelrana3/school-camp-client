@@ -9,10 +9,11 @@ const useCart = () =>{
   
  
     const { refetch,data:cart=[]} = useQuery({
-        queryKey: ['cart', user?.email],
-        enabled:!loading,
+        queryKey: ['carts', user?.email],
+        enabled:!loading && !!user?.email && !! localStorage.getItem('access-token'),
         queryFn: async () => {
-          const res = await axiosSecure(`/cart?email=${user?.email}`)
+          const res = await axiosSecure(`/carts?email=${user?.email}`)
+          console.log('res data',res)
           return res.data;
         },
     })

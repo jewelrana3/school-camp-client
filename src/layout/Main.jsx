@@ -6,13 +6,12 @@ import { useEffect, useState } from "react";
 const Main = () => {
     const location = useLocation();
     const noHeader = location.pathname.includes('login')
-    const [color,setColor] = useState('dark')
+    const [color,setColor] = useState('light')
    
     return (
         <div  data-theme={color}>
             {noHeader || <Navber color={color} setColor={setColor}></Navber>}
             <Outlet></Outlet>
-           {/* <HomeRoute><Outlet></Outlet></HomeRoute> */}
             {noHeader || <Footer></Footer>}
         </div>
     );
