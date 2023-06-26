@@ -47,15 +47,15 @@ const DashBoard = () => {
                         <li className="bg-slate-200 mt-2 w-60  text-slate-500 rounded-xl font-semibold"><NavLink to="/dashboard/selectclass"> Select Classes</NavLink></li>
                         <li className="bg-slate-200 mt-2 w-60   text-slate-500 rounded-xl font-semibold"><NavLink to="/dashboard/myclass">My Classes</NavLink></li>
                         <li className="bg-slate-200 mt-2 w-60  text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/history">Payment History</NavLink></li>
-                        <li className="bg-slate-200 mt-2 w-60  text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/instructor">Instructor</NavLink></li>
+                        <li className="bg-slate-200 mt-2 w-60  text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/">Instructor</NavLink></li>
                         <li className="bg-slate-200 mt-2 w-60  text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/addclass">Add Class</NavLink></li>
                         <li className="bg-slate-200 mt-2 w-60  text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/ins-myclass">My Class</NavLink></li>
           
 
                         <div className="divider"></div>
                         <li className="bg-slate-200 mt-2 w-60  text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/">Home</NavLink> </li>
-                        <li className="bg-slate-200 mt-2 w-60  text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/classes"> Our Classes</NavLink></li>
-                        <li className="bg-slate-200 mt-2 w-60  text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/instructor">Our Instructor</NavLink></li>
+                        {/* <li className="bg-slate-200 mt-2 w-60  text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/classes"> Our Classes</NavLink></li>
+                        <li className="bg-slate-200 mt-2 w-60  text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/instructor">Our Instructor</NavLink></li> */}
                     </div>
                 </ul>
 

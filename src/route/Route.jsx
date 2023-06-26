@@ -17,10 +17,9 @@ import PrivateRoute from "./PrivateRoute";
 import MyClasses from "../pages/Dashboard/MyClasses/MyClasses";
 import History from "../pages/Dashboard/History/History";
 import Image from "../pages/Image/Image";
-import AddClass from "../pages/Dashboard/InstructorDash/AddClass/AddClass";
-import MyClass from "../MyClass/MyClass";
-// import AddClass from "../pages/Dashboard/InstructorDash/AddClass/AddClass";
-// import InstructorDash from "../pages/Dashboard/InstructorDash/InstructorDash";
+import AddClass from "../Dashboard/Instructor/AddClass/AddClass";
+import MyClass from "../Dashboard/Instructor/MyClass/MyClass";
+
 
 
 
@@ -89,7 +88,7 @@ const router = createBrowserRouter([
             element:<AddClass></AddClass>
            },
           {
-            path:'myclass',
+            path:'ins-myclass',
             element:<MyClass></MyClass>
           }
     
