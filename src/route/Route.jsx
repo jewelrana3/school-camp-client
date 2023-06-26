@@ -5,7 +5,7 @@ import {
 import Main from "../layout/Main";
 import Home from "../pages/Home/Home/Home";
 import ErrorPage from "../ErrorPage/ErrorPage";
-import Login from "../pages/Login/Login";
+
 import SignUp from "../pages/SignUp/SignUp";
 import Instructor from "../pages/Instructor/Instructor";
 import InstructorAll from "../pages/InstructorAll/InstructorAll";
@@ -19,6 +19,9 @@ import History from "../pages/Dashboard/History/History";
 import Image from "../pages/Image/Image";
 import AddClass from "../Dashboard/Instructor/AddClass/AddClass";
 import MyClass from "../Dashboard/Instructor/MyClass/MyClass";
+import Login from "../pages/Login/Login";
+import FeadBack from "../Dashboard/Admin/Feadback";
+
 
 
 
@@ -90,7 +93,11 @@ const router = createBrowserRouter([
           {
             path:'ins-myclass',
             element:<MyClass></MyClass>
-          }
+          },
+          {
+            path : '/dashboard/feadback/:id',
+            element : <FeadBack></FeadBack>
+          },
     
         ]   
     }

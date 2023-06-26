@@ -6,7 +6,8 @@
         "name": "John Doe",
         "email": "janesmith@example.com",
         "students": 30,
-        "class": 1
+        "class": 1,
+        "className":"German bavh"
     },
     {
         "title":"Chronicles of the Realm",
@@ -15,7 +16,8 @@
         "name": "Olivia Clark",
         "email": "oliviaclark@example.com",
         "students": 10,
-        "class": 1
+        "class": 1,
+        "className":"Chronicles"
     },
     {
         "title":"Secrets of the Timeless Sands",
@@ -24,7 +26,8 @@
         "name": "Matthew Anderson",
         "email": "matthewanderson@example.com",
         "students": 43,
-        "class": 1
+        "class": 1,
+        "className":"Timeless Sands"
     },
     {
         "title":"A Saga of Blood and Honor",
@@ -33,7 +36,8 @@
         "name": "Davi Johnson",
         "email": "davidjohnson@example.com",
         "students": 20,
-        "class": 1
+        "class": 1,
+        "className":"German david"
     },
   
     {
@@ -43,7 +47,8 @@
         "name": "John Doe",
         "email": "janesmith@example.com",
         "students": 50,
-        "class": 1
+        "class": 1,
+        "className":"janesmith bavh"
     },
     {
         "title":"Quest for the Lost Oracle",
@@ -52,7 +57,8 @@
         "name": "Daniel Taylor",
         "email": "'danieltaylor@example.com",
         "students": 33,
-        "class": 1
+        "class": 1,
+        "className":"Itilian kcik"
     },
     {
         "title":"Journey to the Forgotten Kingdom",
@@ -61,7 +67,8 @@
         "name": "Sophia Brown",
         "email": "sophiabrown@example.com",
         "students": 23,
-        "class": 1
+        "class": 1,
+        "className":"Ger toy"
     },
     {
         "title":"Tales of Celestial Enchantment",
@@ -70,7 +77,8 @@
         "name": "Michael Wilson",
         "email": "michaelwilson@example.com",
         "students": 45,
-        "class": 1
+        "class": 1,
+        "className":"German bavh"
     },
     {
         "title":"Enchantments of the Mystical Isles",
@@ -79,7 +87,8 @@
         "name": "Emily Davis",
         "email": "emilydavis@example.com",
         "students": 15,
-        "class": 1
+        "class": 1,
+        "className":"pacth clik"
     }
     
 ]

@@ -11,21 +11,13 @@ import { AuthContext } from "../../../provider/AuthProvider";
 const MyClass = () => {
   const [classes] = useClass();
   const { user } = useContext(AuthContext);
-  console.log(classes);
-  const myClasses = classes.filter((item) => item?.email === user?.email);
-// TODO : pending class not showing
+
+  // const myClasses = classes.filter((item) => item?.email === user?.email);
+  // TODO : pending class not showing
   console.log(classes);
   return (
     <div className="my-20">
-      {/* <Helmet>
-        <title>| my class</title>
-      </Helmet> */}
-      {/* <SetPageTitle
-        title="My Classes"
-        desc="Experience top-notch instruction from our popular instructors, known for their dynamic teaching style and extensive knowledge."
-      ></SetPageTitle> */}
       <div className="overflow-x-auto w-full">
-      {/* <Fade delay={1e2} cascade damping={1e-1}> */}
         <table className="table">
           {/* head */}
           <thead>
@@ -38,11 +30,11 @@ const MyClass = () => {
               <th>Total Enrolled</th>
               <th>Price</th>
               <th>Feadback</th>
-              
+
             </tr>
           </thead>
           <tbody>
-            {myClasses.map((item, idx) => (
+            {classes.map((item, idx) => (
               <tr key={item._id} className="hover md:text-md">
                 <td>
                   <label>{idx + 1}</label>
@@ -56,11 +48,11 @@ const MyClass = () => {
                 </td>
                 <td>{item.name}</td>
                 <td>{item.email}</td>
-                <td className={`${
-                    item.status === "approved"
-                      ? "text-green-500"
-                      : "text-red-600"
-                  } text-lg`}>{item.status}</td>
+                <td className={`${item.status === "approved"
+                    ? "text-green-500"
+                    : "text-red-600"
+                  } text-lg`}>{item.status}
+                </td>
                 <td className="text-center">{item.enrolled}</td>
                 <td className="text-right">${item.price}</td>
                 <td>{item.status === 'denied' &&
@@ -85,7 +77,6 @@ const MyClass = () => {
             ))}
           </tbody>
         </table>
-        {/* </Fade> */}
       </div>
     </div>
   );

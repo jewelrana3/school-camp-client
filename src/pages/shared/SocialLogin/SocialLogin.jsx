@@ -1,46 +1,47 @@
 import { useContext } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { FaGoogle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
-
-import { toast } from "react-hot-toast";
-
-
-
 const SocialLogin = () => {
-    const navigate = useNavigate();
-    const location = useLocation()
-    const from = location.state?.from?.pathname || '/'
-    const { signInGoogle } = useContext(AuthContext)
+  const { signInGoogle } = useContext(AuthContext);
 
-    const handleGoogleLogin = () => {
-        signInGoogle()
-            .then(result => {
-                const loggedInUser = result.user;
-                console.log(loggedInUser);
-                const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email,role:'student' }
-                fetch('http://localhost:4000/users', {
-                    method: 'POST',
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(saveUser)
-                })
-                    .then(res => res.json())
-                    .then(() => {
-                        navigate(from, { replace: true });
-                    })
-            })
-    }
-    return (
-        <div>
-            <div className="divider">OR</div>
-            <div className="text-center">
-                <button onClick={handleGoogleLogin} className="btn  btn-outline ">
-                    Google Sign In
-                </button>
-            </div>
-        </div>
-    );
+
+  const navigate = useNavigate()
+  const handleGoogleLogin = () => {
+    let from = location.state?.from?.pathname || "/";
+    signInGoogle()
+      .then((result) => {
+        const loggedUser = result.user;
+
+        const saveUser = {name : loggedUser.displayName, email : loggedUser.email, image : loggedUser.photoURL, role : 'student'}
+          fetch('http://localhost:4000/users',{
+            method : "POST",
+            headers : {
+              'content-type' : 'application/json'
+            },
+            body : JSON.stringify(saveUser)
+          })
+          .then(res=>res.json())
+          .then((data)=>{
+                console.log('data', data);
+                navigate(from, { replace: true });
+          })
+
+
+        })
+        .catch((err) => {
+          console.log(err);
+        }); 
+  };
+
+  return (
+    <div className="mt-6">
+      <button onClick={handleGoogleLogin} className="btn  btn-outline">
+        <FaGoogle className="h-6 w-6"></FaGoogle>{" "}
+        <span>Continue With Google</span>
+      </button>
+    </div>
+  );
 };
 
 export default SocialLogin;

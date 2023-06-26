@@ -41,9 +41,11 @@ const AddClass = () => {
                     .then((imageResponse) => {
                         const imageURL = imageResponse.data.display_url;
                         const classData = {
+
                             name: data.name,
                             instructor: user.displayName,
                             email: user.email,
+                            
                             seats: parseInt(data.seats),
                             price: parseFloat(data.price),
                             status: "pending",
@@ -138,6 +140,7 @@ const AddClass = () => {
                     <input
                         {...register("name")}
                         type="text"
+                       
                         required
                         placeholder="Enter Class Name"
                         className="w-full px-3 py-2 border rounded"
