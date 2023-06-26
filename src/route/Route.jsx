@@ -18,6 +18,7 @@ import MyClasses from "../pages/Dashboard/MyClasses/MyClasses";
 import History from "../pages/Dashboard/History/History";
 import Image from "../pages/Image/Image";
 import AddClass from "../pages/Dashboard/InstructorDash/AddClass/AddClass";
+import MyClass from "../MyClass/MyClass";
 // import AddClass from "../pages/Dashboard/InstructorDash/AddClass/AddClass";
 // import InstructorDash from "../pages/Dashboard/InstructorDash/InstructorDash";
 
@@ -86,7 +87,11 @@ const router = createBrowserRouter([
            {
             path:'addclass',
             element:<AddClass></AddClass>
-           }
+           },
+          {
+            path:'myclass',
+            element:<MyClass></MyClass>
+          }
     
         ]   
     }
