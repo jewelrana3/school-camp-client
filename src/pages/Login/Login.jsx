@@ -11,7 +11,7 @@ import SocialLogin from "../shared/SocialLogin/SocialLogin";
 
 const Login = () => {
   const [show, setShow] = useState(false);
-  const { signIn } = useContext(AuthContext);
+  const { singIn } = useContext(AuthContext);
   let from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
   const {
@@ -21,7 +21,7 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    signIn(data.email, data.password)
+    singIn(data.email, data.password)
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);

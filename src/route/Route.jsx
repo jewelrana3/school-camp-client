@@ -21,6 +21,7 @@ import AddClass from "../Dashboard/Instructor/AddClass/AddClass";
 import MyClass from "../Dashboard/Instructor/MyClass/MyClass";
 import Login from "../pages/Login/Login";
 import FeadBack from "../Dashboard/Admin/Feadback";
+import ManegeClass from "../Dashboard/Admin/ManegeClass/ManegeClass";
 
 
 
@@ -98,6 +99,10 @@ const router = createBrowserRouter([
             path : '/dashboard/feadback/:id',
             element : <FeadBack></FeadBack>
           },
+          {
+            path:'manegeclass-admin',
+            element:<ManegeClass></ManegeClass>
+          }
     
         ]   
     }
