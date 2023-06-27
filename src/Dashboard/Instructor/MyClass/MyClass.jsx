@@ -1,21 +1,20 @@
 
 import useClass from "../../../hooks/useClass";
 import { useContext } from "react";
-
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
-// import { Fade } from "react-awesome-reveal";
-// import SetPageTitle from "../../../components/SetPageTitle";
-// import { Helmet } from "react-helmet-async";
+import SetPageTitle from "../../../components/SetPageTitle";
 
 const MyClass = () => {
   const [classes] = useClass();
   const { user } = useContext(AuthContext);
 
-  // const myClasses = classes.filter((item) => item?.email === user?.email);
+  
   // TODO : pending class not showing
-  console.log(classes);
+ 
   return (
+    <>
+    <SetPageTitle title='My Class'></SetPageTitle>
     <div className="my-20">
       <div className="overflow-x-auto w-full">
         <table className="table">
@@ -79,6 +78,7 @@ const MyClass = () => {
         </table>
       </div>
     </div>
+    </>
   );
 };
 

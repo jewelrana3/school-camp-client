@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import useClass from "../../../hooks/useClass";
+import SetPageTitle from "../../../components/SetPageTitle";
 // import SetPageTitle from "../../../components/SetPageTitle";
 // import { Fade } from "react-awesome-reveal";
 // import { Helmet } from "react-helmet-async";
@@ -72,7 +73,7 @@ const ManegeClass = () => {
   };
   return (
     <div className="my-20">
-    
+    <SetPageTitle title='Manege Class'></SetPageTitle>
       <div className="overflow-x-auto w-full">
      
         <table className="table">

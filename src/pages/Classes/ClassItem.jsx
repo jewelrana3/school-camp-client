@@ -59,7 +59,7 @@ const ClassItem = ({ item }) => {
     return (
         <div style={{ width: '21rem' }} className="card w-96 bg-base-100 shadow-xl ">
             <figure><img src={image} alt="Shoes" /></figure>
-            <div className="card-body">
+            <div className={`card-body ${available_seat === 0 ? 'bg-red-500' || "disabled={disabled}" :''}`}>
                 <h2 className="text-2xl font-semibold">{name}</h2>
                 <p>Instructor: {instructor}</p>
                 <p>available_seat: {available_seat}</p>

@@ -100,6 +100,7 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import useUser from "../hooks/useUser";
 import DashBoardHome from "../Dashboard/DashboardHome/DashboardHome";
+import { FaHome } from "react-icons/fa";
 
 const Dashboard = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -107,7 +108,7 @@ const Dashboard = () => {
 
 
     const currentUser = users.find((current) => current?.email === user?.email);
-    // const currentUserRole = currentUser?.role;
+    const currentUserRole = currentUser?.role;
     const handleLogOut = () => {
         logOut()
             .then(() => { })
@@ -119,32 +120,35 @@ const Dashboard = () => {
 
     const listItem =
         <>
-            
-                <div className="flex text-center space-x-5 ">
-                    {currentUser?.role === "instructor" && (
-                        <>
-                            <li className="bg-slate-200 mt-2   text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/">Instructor</NavLink></li>
-                            <li className="bg-slate-200 mt-2   text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/addclass">Add Class</NavLink></li>
-                            <li className="bg-slate-200 mt-2   text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/ins-myclass">My Class</NavLink></li>
-                        </>
-                    )}
-                    {currentUser?.role === "student" && (
-                        <>
-                            <li className="bg-slate-200 mt-2   text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/selectclass">Select Class</NavLink></li>
-                            <li className="bg-slate-200 mt-2   text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/myclass">My Inroll Class</NavLink></li>
-                            <li className="bg-slate-200 mt-2 text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/history">Payment history</NavLink></li>
-                        </>
-                    )}
-                    {currentUser?.role === "admin" && (
-                        <>
-                            <li className="bg-slate-200 mt-2  text-slate-500 rounded-xl font-semibold"><NavLink to="/dashboard/manegeclass-admin">Manege Class</NavLink></li>
-                            <li className="bg-slate-200 mt-2  text-slate-500 rounded-xl font-semibold"><NavLink to="/dashboard/manegeuser">Manege User</NavLink></li>
 
-                        </>
-                    )}
-                </div>
+            <div className="flex text-center space-x-5 ">
+                {currentUser?.role === "instructor" && (
+                    <>
+                        <li className="bg-slate-200 mt-2   text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard"><span><FaHome /></span>User Student</NavLink></li>
+                        <li className="bg-slate-200 mt-2   text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/">Instructor</NavLink></li>
+                        <li className="bg-slate-200 mt-2   text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/addclass">Add Class</NavLink></li>
+                        <li className="bg-slate-200 mt-2   text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/ins-myclass">My Class</NavLink></li>
+                    </>
+                )}
+                {currentUser?.role === "student" && (
+                    <>
+                        <li className="bg-slate-200 mt-2   text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard"><span><FaHome /></span>User Instructor</NavLink></li>
+                        <li className="bg-slate-200 mt-2   text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/selectclass">Select Class</NavLink></li>
+                        <li className="bg-slate-200 mt-2   text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/myclass">My Inroll Class</NavLink></li>
+                        <li className="bg-slate-200 mt-2 text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/history">Payment history</NavLink></li>
+                    </>
+                )}
+                {currentUser?.role === "admin" && (
+                    <>
+                        <li className="bg-slate-200 mt-2   text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard"><span><FaHome /></span>User Admin</NavLink></li>
+                        <li className="bg-slate-200 mt-2  text-slate-500 rounded-xl font-semibold"><NavLink to="/dashboard/manegeclass-admin">Manege Class</NavLink></li>
+                        <li className="bg-slate-200 mt-2  text-slate-500 rounded-xl font-semibold"><NavLink to="/dashboard/manegeuser">Manege User</NavLink></li>
 
-        
+                    </>
+                )}
+            </div>
+
+
             <li>
                 <Link to="/"><span></span>Home</Link>
             </li>
@@ -180,7 +184,7 @@ const Dashboard = () => {
                         <div className="flex-1 px-2 mx-2 text-lg md:text-xl lg:text-2xl font-semibold">
                             <a href="/" className="flex items-center">
                                 <span>
-                                <img
+                                    <img
                                         className="w-8 h-8 mr-2 rounded"
                                         src="https://i.ibb.co/RD4sN8N/Untitled.png"
                                         alt=""
@@ -206,7 +210,7 @@ const Dashboard = () => {
                     </ul>
                 </div>
             </div>
-             <Outlet></Outlet>
+            <Outlet></Outlet>
         </>
     );
 };

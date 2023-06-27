@@ -22,6 +22,8 @@ import Login from "../pages/Login/Login";
 import FeadBack from "../Dashboard/Admin/Feadback";
 import ManegeClass from "../Dashboard/Admin/ManegeClass/ManegeClass";
 import SelectClass from "../pages/Dashboard/SelectClass/SelectClass";
+import ManegeUser from "../Dashboard/Admin/ManegeUser";
+import DashBoardHome from "../Dashboard/DashboardHome/DashboardHome";
 
 
 
@@ -69,6 +71,10 @@ const router = createBrowserRouter([
         element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children:[
             {
+                path:'/dashboard',
+                element:<DashBoardHome></DashBoardHome>
+            },
+            {
                 path:'selectclass',
                 element:<SelectClass></SelectClass>
                
@@ -102,6 +108,10 @@ const router = createBrowserRouter([
           {
             path:'manegeclass-admin',
             element:<ManegeClass></ManegeClass>
+          },
+          {
+            path:'manegeuser',
+            element:<ManegeUser></ManegeUser>
           }
     
         ]   

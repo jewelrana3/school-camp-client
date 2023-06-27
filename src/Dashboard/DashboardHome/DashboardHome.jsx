@@ -27,10 +27,10 @@ const DashBoardHome = () => {
       <div className="text-center space-x-5">
         {currentUser?.role === "instructor" && (
           <>
-            <NavLink to="/dashboard/addClass">
+            <NavLink to="/dashboard/addclass">
               <button className="btn btn-info btn-outline">Add A Class</button>
             </NavLink>
-            <NavLink to="/dashboard/myClass">
+            <NavLink to="/dashboard/ins-myclass">
               <button className="btn btn-primary btn-outline">My Class</button>
             </NavLink>
           </>
@@ -51,10 +51,10 @@ const DashBoardHome = () => {
         )}
         {currentUser?.role === "admin" && (
           <>
-            <NavLink to="/dashboard/manageUser">
+            <NavLink to="/dashboard/manegeuser">
               <button className="btn btn-info btn-outline">Manage Users</button>
             </NavLink>
-            <NavLink to="/dashboard/manageClass">
+            <NavLink to="/dashboard/manegeclass-admin">
               <button className="btn btn-primary btn-outline">
                 Manage Classes
               </button>

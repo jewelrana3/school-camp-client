@@ -5,6 +5,7 @@ import { useContext } from 'react';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import { AuthContext } from '../../../provider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
+import SetPageTitle from '../../../components/SetPageTitle';
 
 
 
@@ -125,7 +126,7 @@ const AddClass = () => {
         // </div>
         <div className="my-10 md:my-20">
 
-
+            <SetPageTitle title='Add Class'></SetPageTitle>
             <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="max-w-lg mx-auto p-6 space-y-6 border-2  rounded bg-slate-50 shadow-md"
