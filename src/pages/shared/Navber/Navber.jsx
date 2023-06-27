@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
 import useCart from "../../../hooks/useCart";
-import { FaMoon,FaCentos } from 'react-icons/fa';
+import { FaMoon, FaCentos } from 'react-icons/fa';
 
 
 const Navber = ({ color, setColor }) => {
@@ -10,14 +10,14 @@ const Navber = ({ color, setColor }) => {
     const [cart] = useCart();
 
     const handleColor = () => {
-        
+
         if (color == "light") {
             setColor("dark")
-           
+
         }
         else {
             setColor("light")
-           
+
         }
     }
 
@@ -29,7 +29,7 @@ const Navber = ({ color, setColor }) => {
 
     const navItem = <div className="navItem flex">
 
-        <li> <NavLink className='mr-6 text-xl' onClick={handleColor}>{color ?<FaMoon></FaMoon>:<FaCentos></FaCentos>}</NavLink></li>
+        <li> <NavLink className='mr-6 text-xl' onClick={handleColor}>{color ? <FaMoon></FaMoon> : <FaCentos></FaCentos>}</NavLink></li>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/instructor'>Instructor</NavLink></li>
         <li><NavLink to='/classes'>Classes</NavLink></li>
@@ -49,7 +49,15 @@ const Navber = ({ color, setColor }) => {
                         {navItem}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                {/* <a className="btn btn-ghost normal-case text-xl"></a> */}
+                <div className="flex items-center">
+                    <span>
+                        <img style={{ borderRadius: '50px' }} className="w-12" src="https://i.ibb.co/chxbvxW/Untitled2.png" alt="photo" />
+                    </span>
+
+                    <span className="text-orange-600 ml-4 text-2xl">Sports</span>{" "}
+                    <span className="text-blue-600 text-2xl ml-2">Masic</span>
+                </div>
             </div>
 
             <div className="navbar-end">

@@ -11,7 +11,6 @@ import Instructor from "../pages/Instructor/Instructor";
 import InstructorAll from "../pages/InstructorAll/InstructorAll";
 import Classes from "../pages/Classes/Classes";
 import Dashboard from "../layout/Dashboard";
-import SelectClass from "../pages/Dashboard/SelectClass/SelectClass";
 import EnrolledClass from "../pages/Dashboard/SelectClass/EnrolledClass/EnrolledClass";
 import PrivateRoute from "./PrivateRoute";
 import MyClasses from "../pages/Dashboard/MyClasses/MyClasses";
@@ -22,6 +21,7 @@ import MyClass from "../Dashboard/Instructor/MyClass/MyClass";
 import Login from "../pages/Login/Login";
 import FeadBack from "../Dashboard/Admin/Feadback";
 import ManegeClass from "../Dashboard/Admin/ManegeClass/ManegeClass";
+import SelectClass from "../pages/Dashboard/SelectClass/SelectClass";
 
 
 

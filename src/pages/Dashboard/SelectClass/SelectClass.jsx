@@ -2,6 +2,7 @@ import { Link,} from "react-router-dom";
 import useCart from "../../../hooks/useCart";
 // import { FaTrash } from "react-icons/fa";
 import Swal from "sweetalert2";
+import SetPageTitle from "../../../components/SetPageTitle";
 
 
 const SelectClass = () => {
@@ -43,7 +44,7 @@ const SelectClass = () => {
             {/* <Helmet>
             <title>| My Cart</title>
         </Helmet> */}
-            
+            <SetPageTitle title='My Selected Page'></SetPageTitle>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
                 {
                     cart.map(item => <div key={item._id} className="overflow-x-auto w-full py-4">

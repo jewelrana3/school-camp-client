@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import usePayment from '../../../hooks/usePayment';
+import SetPageTitle from '../../../components/SetPageTitle';
 
 const History = () => {
     const [history] = usePayment();
     console.log(history)
     return (
-        <div className="overflow-x-auto mb-40">
+      <>
+      <SetPageTitle title='Payment History'></SetPageTitle>
+        <div className="overflow-x-auto mb-40 mt-10">
             <table className="table border border-indigo-200 ml-3">
                 {/* head */}
                 <thead>
@@ -39,6 +42,7 @@ const History = () => {
                 </tbody>
             </table>
         </div>
+      </>
     );
 };
 
