@@ -1,5 +1,6 @@
 
 
+import { Helmet } from "react-helmet-async";
 import SetPageTitle from "../../../components/SetPageTitle";
 import usePayment from "../../../hooks/usePayment";
 
@@ -10,9 +11,9 @@ const MyClasses = () => {
 
   return (
     <>
-       {/* <Helmet>
-        <title> | enroll class</title>
-      </Helmet> */}
+       <Helmet>
+        <title>Sports Easy - Dashboard - My Inroll Class</title>
+      </Helmet>
       <SetPageTitle title='My Enroll Classes'></SetPageTitle> 
       <div className="grid md:grid-cols-2 gap-6 my-10">
         {

@@ -33,7 +33,7 @@ const Navber = ({ color, setColor }) => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/instructor'>Instructor</NavLink></li>
         <li><NavLink to='/classes'>Classes</NavLink></li>
-        <li><NavLink to='/dashboard/selectclass'>Dashboard</NavLink></li>
+        <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
 
 
     </div>

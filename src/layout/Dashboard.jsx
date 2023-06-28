@@ -101,6 +101,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import useUser from "../hooks/useUser";
 import DashBoardHome from "../Dashboard/DashboardHome/DashboardHome";
 import { FaHome } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -159,6 +160,9 @@ const Dashboard = () => {
 
     return (
         <>
+         <Helmet>
+                <title>Sports Easy - Dashboard</title>
+            </Helmet>
             <div className="drawer">
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col">

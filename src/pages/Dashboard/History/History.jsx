@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import usePayment from '../../../hooks/usePayment';
 import SetPageTitle from '../../../components/SetPageTitle';
+import { Helmet } from 'react-helmet-async';
 
 const History = () => {
     const [history] = usePayment();
     console.log(history)
     return (
       <>
+        <Helmet>
+                <title>Sports Easy - Dashboard - history</title>
+            </Helmet>
       <SetPageTitle title='Payment History'></SetPageTitle>
         <div className="overflow-x-auto mb-40 mt-10">
             <table className="table border border-indigo-200 ml-3">

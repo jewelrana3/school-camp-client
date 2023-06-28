@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 import { toast } from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 
 const ClassItem = ({ item }) => {
@@ -36,7 +37,7 @@ const ClassItem = ({ item }) => {
                             title: 'Your work has been saved',
                             showConfirmButton: false,
                             timer: 1500
-                          })
+                        })
                     }
                 })
         } else {
@@ -57,19 +58,24 @@ const ClassItem = ({ item }) => {
 
     }
     return (
-        <div style={{ width: '21rem' }} className="card w-96 bg-base-100 shadow-xl ">
-            <figure><img src={image} alt="Shoes" /></figure>
-            <div className={`card-body ${available_seat === 0 ? 'bg-red-500' :''}`}>
-                <h2 className="text-2xl font-semibold">{name}</h2>
-                <p>Instructor: {instructor}</p>
-                <p>available_seat: {available_seat}</p>
-                <p>Students: {students}</p>
-                <p>fees:$ {amount}</p>
-                <div className="card-actions justify-end">
-                    <button onClick={() => addToCart(item)} className="btn btn-outline btn-accent">Select</button>
+        <>
+            <Helmet>
+                <title>Sports Easy - Classes</title>
+            </Helmet>
+            <div style={{ width: '21rem' }} className="card w-96 bg-base-100 shadow-xl ">
+                <figure><img src={image} alt="Shoes" /></figure>
+                <div className={`card-body ${available_seat === 0 ? 'bg-red-500' : ''}`}>
+                    <h2 className="text-2xl font-semibold">{name}</h2>
+                    <p>Instructor: {instructor}</p>
+                    <p>available_seat: {available_seat}</p>
+                    <p>Students: {students}</p>
+                    <p>fees:$ {amount}</p>
+                    <div className="card-actions justify-end">
+                        <button onClick={() => addToCart(item)} className="btn btn-outline btn-accent">Select</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

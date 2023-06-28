@@ -83,11 +83,11 @@ const ManegeUser = () => {
   return (
     <div className="my-20">
       <Helmet>
-        <title>Sports | manage users</title>
+        <title>Sports - Dashboard - Manage users</title>
       </Helmet>
       <SetPageTitle
         title="Manage Users"
-        desc="Experience top-notch instruction from our popular instructors, known for their dynamic teaching style and extensive knowledge."
+        desc="Experience top-notch instruction from our popular instructors, known for their dynamic teaching style and extensive knowledge sports."
       ></SetPageTitle>
       <div className="overflow-x-auto w-full">
       <Fade delay={1e2} cascade damping={1e-1}>

@@ -14,6 +14,9 @@ const MyClass = () => {
  
   return (
     <>
+     <Helmet>
+        <title>Sports - Dashboard - My Class</title>
+      </Helmet>
     <SetPageTitle title='My Class'></SetPageTitle>
     <div className="my-20">
       <div className="overflow-x-auto w-full">

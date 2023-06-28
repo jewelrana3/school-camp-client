@@ -1,12 +1,13 @@
-import { Link,} from "react-router-dom";
+import { Link, } from "react-router-dom";
 import useCart from "../../../hooks/useCart";
 // import { FaTrash } from "react-icons/fa";
 import Swal from "sweetalert2";
 import SetPageTitle from "../../../components/SetPageTitle";
+import { Helmet } from "react-helmet-async";
 
 
 const SelectClass = () => {
-    const [cart,refetch] = useCart();
+    const [cart, refetch] = useCart();
     console.log(cart)
 
     const handleDelete = (item) => {
@@ -20,30 +21,30 @@ const SelectClass = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-               fetch(`http://localhost:4000/cart/${item._id}`,{
-                method:'DELETE'
-               })
-               .then(res=>res.json())
-               .then(data =>{
-               if(data.deletedCount > 0){
-                refetch();
-                Swal.fire(
-                    'Deleted!',
-                    'Your file has been deleted.',
-                    'success'
-                  )
-               }
-               })
+                fetch(`http://localhost:4000/cart/${item._id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            refetch();
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                        }
+                    })
             }
         })
     }
 
-   
+
     return (
         <div className="w-full">
-            {/* <Helmet>
-            <title>| My Cart</title>
-        </Helmet> */}
+            <Helmet>
+                <title>Sports Easy - Dashboard - Select Class</title>
+            </Helmet>
             <SetPageTitle title='My Selected Page'></SetPageTitle>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
                 {
@@ -56,8 +57,8 @@ const SelectClass = () => {
                                 <p>fees:${item.amount}</p>
                                 <div className="card-actions justify-end">
                                     <button onClick={() => handleDelete(item)} className="btn btn-error">delete</button>
-                                   <Link to={`/dashboard/inrollclass/${item.classesId}`}> <button className="btn btn-primary">Enroll</button></Link>
-                                   
+                                    <Link to={`/dashboard/inrollclass/${item.classesId}`}> <button className="btn btn-primary">Enroll</button></Link>
+
                                 </div>
                             </div>
                         </div>
