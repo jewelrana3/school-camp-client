@@ -19,11 +19,11 @@ import Image from "../pages/Image/Image";
 import AddClass from "../Dashboard/Instructor/AddClass/AddClass";
 import MyClass from "../Dashboard/Instructor/MyClass/MyClass";
 import Login from "../pages/Login/Login";
-import FeadBack from "../Dashboard/Admin/Feadback";
 import ManegeClass from "../Dashboard/Admin/ManegeClass/ManegeClass";
 import SelectClass from "../pages/Dashboard/SelectClass/SelectClass";
 import ManegeUser from "../Dashboard/Admin/ManegeUser";
 import DashBoardHome from "../Dashboard/DashboardHome/DashboardHome";
+import FeadBack from "../Dashboard/Admin/FeadBack";
 
 
 

@@ -4,6 +4,8 @@ import useAuth from "../../../../hooks/useAuth";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import './CheakOut.css'
 import moment from "moment/moment";
+import { Navigate, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const CheakOut = ({ price, cart,image,instructor }) => {
     const stripe = useStripe();
@@ -14,6 +16,7 @@ const CheakOut = ({ price, cart,image,instructor }) => {
     const [clientSecret, setClientSecret] = useState('');
     const [proccess, setProccess] = useState(false);
     const [transactionId, setTransactionId] = useState('')
+    const navigate = useNavigate();
 
 
 
@@ -84,8 +87,16 @@ const CheakOut = ({ price, cart,image,instructor }) => {
             axiosSecure.post('/payment', payment)
                 .then(res => {
                     console.log(res.data)
-                    if (res.data.insertedId) {
-                        // d
+                    if (res.insertedId) {
+                        console.log(res.data)
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: "Payment Successfull!",
+                            showConfirmButton: false,
+                            timer: 1500,
+                          });
+                        navigate('/dashboard/history')
                     }
                 })
         }

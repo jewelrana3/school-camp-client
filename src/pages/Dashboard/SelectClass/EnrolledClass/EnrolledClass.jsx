@@ -3,14 +3,15 @@ import useCart from "../../../../hooks/useCart";
 import { Elements } from "@stripe/react-stripe-js";
 import CheakOut from "./CheakOut";
 import { loadStripe } from "@stripe/stripe-js";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_KEY);
 
 const EnrolledClass = () => {
     const [cart] = useCart();
-
+    
+    const navigate = useNavigate();
     const items = useLoaderData();
     const total = cart.reduce((sum, item) => sum + item.amount, 0)
     const price = parseFloat(total.toFixed(2))

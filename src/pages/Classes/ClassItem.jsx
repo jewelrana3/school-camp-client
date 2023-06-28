@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
@@ -12,6 +12,13 @@ const ClassItem = ({ item }) => {
     const { user } = useContext(AuthContext)
     const navigate = useNavigate();
     const [, refetch] = useCart();
+    const [hide ,setHide] = useState(false)
+
+    useEffect((()=>{
+        if(item?.available_seat === 0){
+            setHide(true)
+        }
+    }),[])
     const addToCart = item => {
 
         console.log(item)
@@ -71,7 +78,7 @@ const ClassItem = ({ item }) => {
                     <p>Students: {students}</p>
                     <p>fees:$ {amount}</p>
                     <div className="card-actions justify-end">
-                        <button onClick={() => addToCart(item)} className="btn btn-outline btn-accent">Select</button>
+                        <button disabled={hide} onClick={() => addToCart(item)} className="btn btn-outline btn-accent">Select</button>
                     </div>
                 </div>
             </div>

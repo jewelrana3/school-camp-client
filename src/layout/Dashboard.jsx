@@ -150,8 +150,8 @@ const Dashboard = () => {
             </div>
 
 
-            <li>
-                <Link to="/"><span></span>Home</Link>
+            <li className="bg-slate-200 mt-2  text-slate-500 rounded-xl font-semibold ml-2">
+                <NavLink  to="/"><span></span>Home</NavLink>
             </li>
             <li>
                 <Link to='/'><button onClick={handleLogOut} className="btn btn-outline">Log Out</button></Link>
