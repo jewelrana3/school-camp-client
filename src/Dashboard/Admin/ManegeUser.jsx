@@ -5,6 +5,7 @@ import { Fade } from "react-awesome-reveal";
 import { Helmet } from "react-helmet-async";
 import SetPageTitle from "../../components/SetPageTitle";
 import useUser from "../../hooks/useUser";
+// import { toast } from "react-hot-toast";
 
 const ManegeUser = () => {
   const [users, , refetch] = useUser();
@@ -45,6 +46,7 @@ const ManegeUser = () => {
   };
 
   const handleMakeAdmin = (id) => {
+    
     Swal.fire({
       title: "Are you sure?",
       icon: "warning",
@@ -64,10 +66,11 @@ const ManegeUser = () => {
           .then((data) => {
             if (data.data.modifiedCount > 0) {
               refetch();
+              // toast.success('make admin successfully!')
               Swal.fire({
                 position: "top-end",
                 icon: "success",
-                title: "make instructor successfully!",
+                title: "make admin successfully!",
                 showConfirmButton: false,
                 timer: 1500,
               });
@@ -132,7 +135,7 @@ const ManegeUser = () => {
                     onClick={() => handleMakeAdmin(item._id)}
                     type="submit"
                     disabled={item.role === 'student' || item.role === 'instructor' ?  false :true}
-                    className="bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded"
+                    className="bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded items-center"
                   >
                     make admin
                   </button>

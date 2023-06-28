@@ -19,11 +19,11 @@ const ManegeClass = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.patch(`https://summer-school-camp-server-nine.vercel.app/approved/${id}`, {
+        axios.patch(`http://localhost:4000/approved/${id}`, {
           // Request data
         }, {
           headers: {
-            authorization: `Bearer ${localStorage.getItem('secret-access-token')}`
+            authorization: `Bearer ${localStorage.getItem('access-token')}`
           }
         }).then((data) => {
           if (data.data.modifiedCount > 0) {
@@ -50,11 +50,11 @@ const ManegeClass = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.patch(`https://summer-school-camp-server-nine.vercel.app/denied/${id}`, {
+        axios.patch(`http://localhost:4000/denied/${id}`, {
           // Request data
         }, {
           headers: {
-            authorization: `Bearer ${localStorage.getItem('secret-access-token')}`
+            authorization: `Bearer ${localStorage.getItem('access-token')}`
           }
         }).then((data) => {
           if (data.data.modifiedCount > 0) {
