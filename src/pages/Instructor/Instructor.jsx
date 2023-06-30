@@ -1,7 +1,22 @@
 
+import { Fade } from "react-awesome-reveal";
 import TitleHeader from "../../components/TitleHeader";
 import useInstructor from "../../hooks/useInstructor";
+import Reveal from "react-awesome-reveal";
+import { keyframes } from "@emotion/react";
 
+
+const customAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(-200px, -100px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`;
 
 const Instructor = () => {
     const [instructor] = useInstructor();
@@ -13,7 +28,8 @@ const Instructor = () => {
             
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
+           <Fade keyframes={customAnimation}>
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
                 {
                     instructor.slice(0,6).map(item => <div style={{ width: '21rem' }}  key={item.id} className="card card-compact w-96 bg-base-100 shadow-xl">
                         <figure><img src={item.image} alt="Shoes" /></figure>
@@ -25,6 +41,7 @@ const Instructor = () => {
                     </div>)
                 }
             </div>
+           </Fade>
         </div>
     );
 };

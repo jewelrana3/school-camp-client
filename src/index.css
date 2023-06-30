@@ -14,3 +14,14 @@
     background-color: rgb(87, 94, 13);
     
   }
+
+  .container{
+    display: flex;
+  }
+  .container .paragraph{
+    margin-bottom: 26px;
+    text-align:start;
+  }
+  .container .paragraph .button{
+    margin-bottom: 10px;
+  }

@@ -21,12 +21,12 @@ const Banner = () => {
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src='https://i.ibb.co/w4YtCpc/omar-ram-e-Eh-Oy-Et-BGMQ-unsplash.jpg' className="w-full rounded-lg" />
                     <div className="absolute rounded-lg flex items-center left-0 top-0 h-full bottom-0 bg-gradient-to-r from-[#151515] to-[rgba (21, 21, 21, 0)]">
-                        <div className='text-white space-y-7 pl-12 w-1/2'>
+                        <div className='text-white space-y-7 pl-12 w-1/2 container'>
 
 
                             <div className="mt-80">
-                                <Fade delay={1e2} duration={2000} damping={1e-3}><p className="text-stone-400 font-">International football was in its infancy at the time. However,  international tournament was organised by sources claim that an unofficial football tournament was organised during the first competition</p></Fade>
-                                <div className="flex">
+                                <Fade delay={1e2} duration={2000} damping={1e-3}><p className="text-stone-400 paragraph">International football was in its infancy at the time. However,  international tournament was organised by sources claim that an unofficial football tournament was organised during the first competition</p></Fade>
+                                <div className="flex button">
                                     <button className="btn btn-active btn-accent mr-5">Sports More</button>
                                     <button className="btn btn-outline btn-info">Sports Learn</button>
                                 </div>

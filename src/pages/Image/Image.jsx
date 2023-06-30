@@ -4,7 +4,7 @@ import TitleHeader from '../../components/TitleHeader';
 
 const Image = () => {
     return (
-        <div  data-aos="flip-up"   data-aos-duration="3000">
+        <div  data-aos="flip-up"   data-aos-duration="2000">
           <TitleHeader title='Our ' sub='Sports' des='Footballs first world championship After these tournaments, FIFA realized that the Olympic '></TitleHeader>
             <div className='image-item bg-fixed mb-20'>
                 <div className='md:flex justify-center bg-opacity-10 bg-slate-400  items-center py-10 px-16 mt-16'>
