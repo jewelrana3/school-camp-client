@@ -49,7 +49,7 @@ const Navber = ({ color, setColor }) => {
                         {navItem}
                     </ul>
                 </div>
-                {/* <a className="btn btn-ghost normal-case text-xl"></a> */}
+                
                 <div className="flex items-center">
                     <span>
                         <img style={{ borderRadius: '50px' }} className="w-12" src="https://i.ibb.co/chxbvxW/Untitled2.png" alt="photo" />

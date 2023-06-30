@@ -75,7 +75,7 @@ const ClassItem = ({ item }) => {
                     <h2 className="text-2xl font-semibold">{name}</h2>
                     <p>Instructor: {instructor}</p>
                     <p>available_seat: {available_seat}</p>
-                    <p>Students: {students}</p>
+                    <p>Total Inroll: {students}</p>
                     <p>fees:$ {amount}</p>
                     <div className="card-actions justify-end">
                         <button disabled={hide} onClick={() => addToCart(item)} className="btn btn-outline btn-accent">Select</button>

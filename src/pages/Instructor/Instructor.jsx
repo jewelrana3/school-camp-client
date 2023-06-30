@@ -1,4 +1,5 @@
 
+import TitleHeader from "../../components/TitleHeader";
 import useInstructor from "../../hooks/useInstructor";
 
 
@@ -8,8 +9,8 @@ const Instructor = () => {
     return (
         <div className="mt-16 mb-16">
             <div className="text-center mb-16 px-3 pr-11">
-                <h2 className="text-3xl font-bold  text-slate-900"><span className="text-emerald-500">Instructor</span> Class</h2>
-                <p>The Intructor Classes Men of Best Side Course Instructor</p>
+               <TitleHeader title='Instructor ' sub='Class' des='The Intructor Classes Men of Best Side Course Instructor'></TitleHeader>
+            
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
