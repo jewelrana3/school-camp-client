@@ -22,7 +22,7 @@ const PopularClass = () => {
             </div>
 
             <Fade  duration={3000}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
+                <div className="grid grid-cols-1 sm:grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-16">
                     {
                         popular.map(item => <div key={item.id} style={{ width: '22rem' }} className="card card-compact w-96 bg-base-100 shadow-xl">
                             <figure><img src={item.image} alt="Shoes" /></figure>

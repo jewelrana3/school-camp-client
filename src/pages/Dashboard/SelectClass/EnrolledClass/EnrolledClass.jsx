@@ -20,7 +20,7 @@ const EnrolledClass = () => {
 
     return (
         <div>
-            <div className="card card-side bg-base-100 shadow-xl">
+            <div className="card card-side bg-base-100 shadow-xl mt-12">
                 <figure><img style={{ width: '300px', height: '100%' }} src={image} alt="Movie" /></figure>
                 <div className="card-body">
                     <h2 className="text-3xl font-semibold">Inrolled class</h2>

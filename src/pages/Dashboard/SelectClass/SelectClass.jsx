@@ -46,7 +46,7 @@ const SelectClass = () => {
                 <title>Sports Easy - Dashboard - Select Class</title>
             </Helmet>
             <SetPageTitle title='My Selected Page'></SetPageTitle>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {
                     cart.map(item => <div key={item._id} className="overflow-x-auto w-full py-4">
                         <div className="card w-96 bg-base-100 shadow-xl ml-4">
