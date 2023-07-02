@@ -6,6 +6,7 @@ import useCart from "../../hooks/useCart";
 import { toast } from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
 import Dashboard from "../../layout/Dashboard";
+import { Fade } from "react-awesome-reveal";
 
 
 const ClassItem = ({ item }) => {
@@ -13,13 +14,13 @@ const ClassItem = ({ item }) => {
     const { user } = useContext(AuthContext)
     const navigate = useNavigate();
     const [, refetch] = useCart();
-    const [hide ,setHide] = useState(false)
+    const [hide, setHide] = useState(false)
 
-    useEffect((()=>{
-        if(item?.available_seat === 0){
+    useEffect((() => {
+        if (item?.available_seat === 0) {
             setHide(true)
-        }Dashboard
-    }),[])
+        } Dashboard
+    }), [])
     const addToCart = item => {
 
         console.log(item)
@@ -70,19 +71,21 @@ const ClassItem = ({ item }) => {
             <Helmet>
                 <title>Sports Easy - Classes</title>
             </Helmet>
-            <div style={{ width: '21rem' }} className="card w-96 bg-base-100 shadow-xl ">
-                <figure><img src={image} alt="Shoes" /></figure>
-                <div className={`card-body ${available_seat === 0 ? 'bg-red-500' : ''}`}>
-                    <h2 className="text-2xl font-semibold">{name}</h2>
-                    <p>Instructor: {instructor}</p>
-                    <p>available_seat: {available_seat}</p>
-                    <p>Total Inroll: {students}</p>
-                    <p>fees:$ {amount}</p>
-                    <div className="card-actions justify-end">
-                        <button disabled={hide} onClick={() => addToCart(item)} className="btn btn-outline btn-accent">Select</button>
+            <Fade duration={4000}>
+                <div style={{ width: '21rem' }} className="card w-96 bg-base-100 shadow-xl ">
+                    <figure><img src={image} alt="Shoes" /></figure>
+                    <div className={`card-body ${available_seat === 0 ? 'bg-red-500' : ''}`}>
+                        <h2 className="text-2xl font-semibold">{name}</h2>
+                        <p>Instructor: {instructor}</p>
+                        <p>available_seat: {available_seat}</p>
+                        <p>Total Inroll: {students}</p>
+                        <p>fees:$ {amount}</p>
+                        <div className="card-actions justify-end">
+                            <button disabled={hide} onClick={() => addToCart(item)} className="btn btn-outline btn-accent">Select</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Fade>
         </>
     );
 };

@@ -29,7 +29,7 @@ const Instructor = () => {
     .then(data =>{
       setInstructor(data)
     })
-   },[])
+   },[instructor])
     
     return (
         <div className="mb-12">
