@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
 import SetPageTitle from "../../../components/SetPageTitle";
+import { Helmet } from "react-helmet-async";
 
 const MyClass = () => {
   const [classes] = useClass();

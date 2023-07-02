@@ -10,6 +10,7 @@ import { Helmet } from "react-helmet-async";
 
 const ManegeClass = () => {
   const [classes, , refetch] = useClass();
+  console.log(classes)
   const handleApproved = (id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -20,7 +21,7 @@ const ManegeClass = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.patch(`http://localhost:4000/approved/${id}`, {
+        axios.patch(`https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/approved/${id}`, {
           // Request data
         }, {
           headers: {
@@ -51,7 +52,7 @@ const ManegeClass = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.patch(`http://localhost:4000/denied/${id}`, {
+        axios.patch(`https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/denied/${id}`, {
           // Request data
         }, {
           headers: {

@@ -31,7 +31,7 @@ const Navber = ({ color, setColor }) => {
 
         <li> <NavLink className='mr-6 text-xl' onClick={handleColor}>{color ? <FaMoon></FaMoon> : <FaCentos></FaCentos>}</NavLink></li>
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/instructor'>Instructor</NavLink></li>
+        <li><NavLink to='/All-instructor'>Instructor</NavLink></li>
         <li><NavLink to='/classes'>Classes</NavLink></li>
         <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
 

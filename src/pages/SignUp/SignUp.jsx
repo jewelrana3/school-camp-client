@@ -38,7 +38,7 @@ const SignUp = () => {
                 image : data.photoURL,
                 role: "student",
               };
-              fetch("http://localhost:4000/users", {
+              fetch("https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/users", {
                 method: "POST",
                 headers: {
                   "content-type": "application/json",

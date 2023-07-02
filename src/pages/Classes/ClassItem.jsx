@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 import { toast } from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
+import Dashboard from "../../layout/Dashboard";
 
 
 const ClassItem = ({ item }) => {
@@ -17,14 +18,14 @@ const ClassItem = ({ item }) => {
     useEffect((()=>{
         if(item?.available_seat === 0){
             setHide(true)
-        }
+        }Dashboard
     }),[])
     const addToCart = item => {
 
         console.log(item)
         if (user && user?.email) {
             const navItem = { classesId: _id, name, instructor, image, amount, email: user?.email }
-            fetch('http://localhost:4000/cart', {
+            fetch('https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/popular', {
                 method: 'POST',
                 headers:
                 {

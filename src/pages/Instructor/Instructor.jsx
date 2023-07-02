@@ -4,6 +4,8 @@ import TitleHeader from "../../components/TitleHeader";
 import useInstructor from "../../hooks/useInstructor";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
+import { useLoaderData } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 
 const customAnimation = keyframes`
@@ -19,19 +21,27 @@ const customAnimation = keyframes`
 `;
 
 const Instructor = () => {
-    const [insInstructor] = useInstructor();
-    console.log(insInstructor)
+   const [instructor,setInstructor] = useState([])
+
+   useEffect(()=>{
+    fetch('https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/instructor')
+    .then(res => res.json())
+    .then(data =>{
+      setInstructor(data)
+    })
+   },[])
+    
     return (
-        <div className="mt-16 mb-16">
-            <div className="text-center mb-16 px-3 pr-11">
+        <div className="mb-12">
+            <div className="text-center mb-16 px-3 pr-11 pt-32">
                <TitleHeader title='Instructor ' sub='Class' des='The Intructor Classes Men of Best Side Course Instructor'></TitleHeader>
             
             </div>
 
            <Fade keyframes={customAnimation}>
-           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
                 {
-                    insInstructor.slice(0,6).map(item => <div style={{ width: '21rem' }}  key={item.id} className="card card-compact w-96 bg-base-100 shadow-xl">
+                    instructor?.slice(0,6).map(item => <div style={{ width: '21rem' }}  key={item.id} className="card card-compact w-96 bg-base-100 shadow-xl">
                         <figure><img src={item.image} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title"> {item.name}</h2>
