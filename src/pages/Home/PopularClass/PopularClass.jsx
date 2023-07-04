@@ -14,7 +14,7 @@ const PopularClass = () => {
                 const itemsName = data.filter(item => item.category === 'ball')
                 setPopular(itemsName)
             })
-    }, [popular])
+    }, [])
     return (
         <div className="mt-32 bg-slate-200 px-2  pr-11 py-4 ">
             <div className="text-center  mb-16">
