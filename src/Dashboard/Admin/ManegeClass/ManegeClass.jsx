@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet-async";
 
 const ManegeClass = () => {
   const [classes, , refetch] = useClass();
-  console.log(classes)
+
   const handleApproved = (id) => {
     Swal.fire({
       title: "Are you sure?",

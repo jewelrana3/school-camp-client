@@ -15,7 +15,7 @@ const EnrolledClass = () => {
     const items = useLoaderData();
     const total = cart.reduce((sum, item) => sum + item.amount, 0)
     const price = parseFloat(total.toFixed(2))
-    console.log(total)
+
     const { image, classesId, instructor, amount } = items;
 
     return (
