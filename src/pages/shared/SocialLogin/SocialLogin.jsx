@@ -14,7 +14,7 @@ const SocialLogin = () => {
         const loggedUser = result.user;
 
         const saveUser = {name : loggedUser.displayName, email : loggedUser.email, image : loggedUser.photoURL, role : 'student'}
-          fetch('https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/users',{
+          fetch('http://localhost:4000/users',{
             method : "POST",
             headers : {
               'content-type' : 'application/json'
@@ -23,7 +23,7 @@ const SocialLogin = () => {
           })
           .then(res=>res.json())
           .then((data)=>{
-                console.log('data', data);
+           
                 navigate(from, { replace: true });
           })
 

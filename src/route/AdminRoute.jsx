@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { Navigate,useLocation } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import useAdmin from "../hooks/useAdmin";
+import Loader from "../pages/Loader";
 
 
 const AdminRoute = ({ children }) => {
@@ -12,7 +13,7 @@ const AdminRoute = ({ children }) => {
     
 
     if(loading || isAdminLoading){
-        return <progress className="progress w-56"></progress>
+        return <Loader></Loader>
     }
 
     if (user && isAdmin) {

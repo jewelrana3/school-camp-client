@@ -6,7 +6,7 @@ import { Fade } from "react-awesome-reveal";
 const InstructorAll = () => {
 
     const instructor = useLoaderData();
-    console.log(instructor)
+  
     return (
         <>
             <Helmet>

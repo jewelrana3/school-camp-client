@@ -38,7 +38,7 @@ const SignUp = () => {
                 image : data.photoURL,
                 role: "student",
               };
-              fetch("https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/users", {
+              fetch("http://localhost:4000/users", {
                 method: "POST",
                 headers: {
                   "content-type": "application/json",
@@ -47,7 +47,6 @@ const SignUp = () => {
               })
                 .then((res) => res.json())
                 .then((data) => {
-                  console.log("user saved", data);
                   if (data.insertedId) {
                     toast("User create Successfully!");
                     navigate('/')

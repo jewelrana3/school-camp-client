@@ -45,7 +45,7 @@ const CheakOut = ({ price, cart,image,instructor }) => {
             card
         })
         if (error) {
-            console.log('error', error)
+            
             setError(error.message)
         } else {
             setError('')
@@ -71,7 +71,7 @@ const CheakOut = ({ price, cart,image,instructor }) => {
         setProccess(false)
         if (paymentIntent.status === "succeeded") {
             setTransactionId(paymentIntent.id)
-            
+            navigate('/dashboard/history')
             const payment = {
                 email: user?.email,
                 transactionId: paymentIntent.id,
@@ -86,9 +86,7 @@ const CheakOut = ({ price, cart,image,instructor }) => {
             }
             axiosSecure.post('/payment', payment)
                 .then(res => {
-                    console.log(res.data)
-                    if (res.insertedId) {
-                        console.log(res.data)
+                    if (res.insertedId) {  
                         Swal.fire({
                             position: "top-end",
                             icon: "success",
@@ -96,7 +94,7 @@ const CheakOut = ({ price, cart,image,instructor }) => {
                             showConfirmButton: false,
                             timer: 1500,
                           });
-                        navigate('/dashboard/history')
+                       
                     }
                 })
         }

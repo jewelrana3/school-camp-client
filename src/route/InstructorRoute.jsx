@@ -4,6 +4,7 @@ import { Navigate,useLocation } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 
 import useInstructor from "../hooks/useInstructor";
+import Loader from "../pages/Loader";
 
 
 const InstructorRoute = ({ children }) => {
@@ -13,7 +14,7 @@ const InstructorRoute = ({ children }) => {
     
 
     if(loading || isInstructorLoading){
-        return <progress className="progress w-56"></progress>
+        return <Loader></Loader>
     }
 
     if (user && insInstructor) {

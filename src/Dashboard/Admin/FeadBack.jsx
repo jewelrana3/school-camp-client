@@ -13,7 +13,7 @@ const FeadBack = () => {
     const { user } = useContext(AuthContext)
     const [users] = useUser()
     const currentUser = users.find(item => item?.email === user?.email)
-    console.log(currentUser);
+   
     const data = classes.find(item => item._id === id);
     const handleFeadbackSubmit = (e) => {
         e.preventDefault();
@@ -24,11 +24,11 @@ const FeadBack = () => {
         feadbackData.feadback = feadbackText
         feadbackData.role = currentUser?.role
 
-        console.log(feadbackData);
+       
 
 
 
-        fetch('https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/feadbackCollection', {
+        fetch('http://localhost:4000/feadbackCollection', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

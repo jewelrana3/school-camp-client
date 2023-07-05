@@ -10,7 +10,7 @@ const useClass = () => {
         queryKey : ['classes'],
         enabled : !loading,
         queryFn : async()=>{
-            const res = await fetch('https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/allclass',{
+            const res = await fetch('http://localhost:4000/allclass',{
                headers : {
                 authorization : `Bearer ${localStorage.getItem('access-token')}`
                }

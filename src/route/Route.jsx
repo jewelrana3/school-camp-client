@@ -58,7 +58,7 @@ const router = createBrowserRouter([
             {
                 path:'All-instructor',
                 element:<InstructorAll></InstructorAll>,
-                loader:()=> fetch('https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/instructor')
+                loader:()=> fetch('http://localhost:4000/instructor')
             
             },
             {
@@ -88,7 +88,7 @@ const router = createBrowserRouter([
             {
                 path:'inrollclass/:id',
                 element:<EnrolledClass></EnrolledClass>,
-                loader:({params}) => fetch(`https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/popular/${params.id}`)
+                loader:({params}) => fetch(`http://localhost:4000/popular/${params.id}`)
             },
             {
                 path:'myclass',
