@@ -28,7 +28,7 @@ const Dashboard = () => {
     const listItem =
         <>
 
-            <div className="md:flex sm:block sm:justify-start text-center space-x-5">
+            <div className="md:flex sm:inline-block text-center space-x-5">
                 {currentUser?.role === "instructor" && (
                     <>
 
