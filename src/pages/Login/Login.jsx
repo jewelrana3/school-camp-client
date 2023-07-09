@@ -17,6 +17,7 @@ const Login = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -27,6 +28,7 @@ const Login = () => {
 
         toast.success("user login successfull!");
         navigate(from, { replace: true });
+        reset();
       })
       .catch((err) => {
         console.log(err);

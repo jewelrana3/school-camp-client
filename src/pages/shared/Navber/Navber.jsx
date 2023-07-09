@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
 import useCart from "../../../hooks/useCart";
 import { FaMoon, FaCentos } from 'react-icons/fa';
@@ -29,7 +29,7 @@ const Navber = ({ color, setColor }) => {
 
     const navItem = <div className="navItem flex">
 
-        <li> <NavLink className='mr-6 text-xl' onClick={handleColor}>{color ? <FaMoon></FaMoon> : <FaCentos></FaCentos>}</NavLink></li>
+        <li><Link className='mr-6 text-xl' onClick={handleColor}>{<FaMoon></FaMoon>}</Link></li>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/All-instructor'>Instructor</NavLink></li>
         <li><NavLink to='/classes'>Classes</NavLink></li>

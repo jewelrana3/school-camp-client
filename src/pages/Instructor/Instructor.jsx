@@ -24,7 +24,7 @@ const Instructor = () => {
    const [instructor,setInstructor] = useState([])
 
    useEffect(()=>{
-    fetch('http://localhost:4000/instructor')
+    fetch('https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/instructor')
     .then(res => res.json())
     .then(data =>{
       

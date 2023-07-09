@@ -28,7 +28,7 @@ const FeadBack = () => {
 
 
 
-        fetch('http://localhost:4000/feadbackCollection', {
+        fetch('https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/feadbackCollection', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
