@@ -28,7 +28,7 @@ const Dashboard = () => {
     const listItem =
         <>
 
-            <div className="flex text-center space-x-5 ">
+            <div className="md:flex sm:block sm:justify-start text-center space-x-5">
                 {currentUser?.role === "instructor" && (
                     <>
 
@@ -47,7 +47,7 @@ const Dashboard = () => {
                 )}
                 {currentUser?.role === "admin" && (
                     <>
-                           <li className="bg-slate-200 mt-2   text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/">User Admin</NavLink></li>
+                        <li className="bg-slate-200 mt-2   text-slate-500 rounded-xl hover:text-green-400 font-semibold "><NavLink to="/dashboard/">User Admin</NavLink></li>
                         <li className="bg-slate-200 mt-2  text-slate-500 rounded-xl font-semibold"><NavLink to="/dashboard/manegeclass-admin">Manege Class</NavLink></li>
                         <li className="bg-slate-200 mt-2  text-slate-500 rounded-xl font-semibold"><NavLink to="/dashboard/manegeuser">Manege User</NavLink></li>
 
@@ -69,7 +69,7 @@ const Dashboard = () => {
          <Helmet>
                 <title>Sports Easy - Dashboard</title>
             </Helmet>
-            <div className="drawer">
+            <div className="drawer ">
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col">
                     {/* Navbar */}

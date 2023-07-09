@@ -24,7 +24,7 @@ const DashBoardHome = () => {
         </h3>
         <h3 className="text-md mt-2 lowercase">{user?.email}</h3>
       </div>
-      <div className="text-center space-x-5">
+      <div className="text-center space-x-5 ">
         {currentUser?.role === "instructor" && (
           <>
             <NavLink to="/dashboard/addclass">
