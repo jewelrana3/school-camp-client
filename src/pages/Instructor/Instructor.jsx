@@ -46,7 +46,7 @@ const Instructor = () => {
                         <figure><img src={item.image} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title"> {item.name}</h2>
-                            <p className="text text-gray-700 font-semibold">Student: {item.students}</p>
+                            <p className="text text-gray-700 font-semibold"> {item.email}</p>
 
                         </div>
                     </div>)

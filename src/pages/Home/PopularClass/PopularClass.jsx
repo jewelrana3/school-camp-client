@@ -29,8 +29,11 @@ const PopularClass = () => {
                             <figure><img src={item.image} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title"> {item.name}</h2>
-                                <p>Instructor: {item.instructor}</p>
-
+                               
+                                <p>Price: {item.amount}</p>
+                                <p>Total Inroll: {item.students}</p>
+                                <p>available_seat: {item.available_seat}</p>
+                                <p className="text-semibold text-lg">Instructor: {item.instructor}</p>
                             </div>
                         </div>)
                     }

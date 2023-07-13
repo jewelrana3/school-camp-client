@@ -54,6 +54,15 @@ const ClassItem = ({ item }) => {
                         })
                     }
                 })
+                if(data.message){
+                    Swal.fire({
+                      position: 'top-end',
+                      icon: 'error',
+                      title: "Already Select this course. check your dashboard!",
+                      showConfirmButton: false,
+                      timer: 1500
+                    })
+                  }
         } else {
             Swal.fire({
                 title: 'Are you sure?',
