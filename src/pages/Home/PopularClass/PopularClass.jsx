@@ -17,15 +17,15 @@ const PopularClass = () => {
             })
     }, [])
     return (
-        <div className="mt-32 bg-slate-200 px-2  pr-11 py-4 ">
-            <div className="text-center  mb-16">
+        <div className="mt-32 bg-slate-200 px-2 min-h-screen py-4">
+            <div className="text-center mb-16 ">
                 <TitleHeader title='Popular ' sub='Class' des='The truth is that it certainly can be, assuming you are using the right application to help you get there!'></TitleHeader>
             </div>
 
             <Fade  duration={3000}>
-                <div className="grid grid-cols-1 sm:grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-16">
+                <div className="grid md:grid-cols-2 grid-flow-row-dense lg:grid-cols-3 lg:w-auto gap-10 ">
                     {
-                        popular.map(item => <div key={item._id} style={{ width: '22rem' }} className="card card-compact w-96 bg-base-100 shadow-xl">
+                        popular.map(item => <div key={item._id} className="card card-compact bg-base-100 shadow-xl">
                             <figure><img src={item.image} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title"> {item.name}</h2>
