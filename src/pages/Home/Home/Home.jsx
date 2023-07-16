@@ -16,7 +16,7 @@ const Home = () => {
             <Instructor></Instructor>
             <Image></Image>
         </div>
-    );
+    )
 };
 
 export default Home;

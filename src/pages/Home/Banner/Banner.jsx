@@ -7,7 +7,7 @@ const Banner = () => {
     return (
         <div>
             <Carousel>
-                <div>
+                {/* <div>
                     <img src="https://i.ibb.co/w4YtCpc/omar-ram-e-Eh-Oy-Et-BGMQ-unsplash.jpg" />
                     <div className="absolute top-0 flex items-center px-8 md:px-36 inset-0 bg-gray-900 opacity-75">
                         <div className="text-white">
@@ -15,7 +15,8 @@ const Banner = () => {
                             <Fade delay={1e2} cascade damping={1e-1}><p className="text-xs lg:text-lg text-auto">こんにちは! Embark on a captivating journey into the heart of Japanese. Immerse yourself in the harmony of ancient traditions and cutting-edge technology. Let the beauty of Japanese characters and the allure of its cultural heritage captivate your senses.</p></Fade>
                         </div>
                     </div>
-                </div>
+                </div> */}
+                 
                 <div>
                     <img src="https://i.ibb.co/6D3cgwh/alliance-football-club-x1-OStt-M2ajo-unsplash.jpg" />
                     <div className="absolute top-0 flex items-center px-6 md:px-36 inset-0 bg-gray-900 opacity-75">
@@ -40,3 +41,7 @@ const Banner = () => {
 };
 
 export default Banner;
+
+
+
+

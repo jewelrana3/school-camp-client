@@ -22,7 +22,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <div className='max-w-screen-xl mx-auto'>
         <HelmetProvider>
           <AuthProvider>
-            <RouterProvider router={router}></RouterProvider>
+            <div className='max-w-7xl  mx-auto border'>
+              <RouterProvider router={router}></RouterProvider>
+            </div>
           </AuthProvider>
         </HelmetProvider>
       </div>

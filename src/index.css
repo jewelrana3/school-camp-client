@@ -15,18 +15,9 @@
     
   }
 
-  /* .container{
-    display: flex;
+  navItem .li{
+    color:white;
   }
-  .container .paragraph{
-    margin-bottom: 26px;
-    text-align:start;
-  }
-  @media screen and (min-width:440px){
-    .container .paragraph .button{
-      display: block;
-    }
-  } */
 
   .thumbs{
     display: none;

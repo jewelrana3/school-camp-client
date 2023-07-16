@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         <div>
           <span className="footer-title">Social</span>
-          <div className="grid grid-flow-col gap-6    ">
+          <div className="flex justify-center items-center gap-6">
             <a href=""><FaFacebook className='w-8 h-8' /></a>
             <a href=""><FaGithub className='w-8 h-8' /></a>
             <a href=""><FaTwitter className='w-8 h-8' /></a>
