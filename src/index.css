@@ -15,10 +15,12 @@
     
   }
 
-  navItem .li{
-    color:white;
-  }
+  
 
   .thumbs{
     display: none;
+}
+body{
+  overflow-x:hidden;
+  /* overflow-y :hidden; */
 }
