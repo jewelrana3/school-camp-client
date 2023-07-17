@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import { AuthContext } from "../../provider/AuthProvider";
 import SocialLogin from "../shared/SocialLogin/SocialLogin";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -45,9 +46,9 @@ const Login = () => {
   };
   return (
     <>
-      {/* <Helmet>
-        <title>SpeckEasy | Login</title>
-      </Helmet> */}
+      <Helmet>
+        <title>Sport Easy | Login</title>
+      </Helmet>
  <div className="hero py-10">
   <div className="hero-content flex-col w-full">
     <div className="text-center lg:text-left">
