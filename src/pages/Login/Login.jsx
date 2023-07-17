@@ -7,6 +7,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../provider/AuthProvider";
 import SocialLogin from "../shared/SocialLogin/SocialLogin";
+import Swal from "sweetalert2";
 
 
 const Login = () => {
@@ -25,10 +26,17 @@ const Login = () => {
     singIn(data.email, data.password)
       .then((result) => {
         const loggedUser = result.user;
-
-        toast.success("user login successfull!");
-        navigate(from, { replace: true });
         reset();
+        Swal.fire({
+          position: 'top-center',
+          icon: 'success',
+          title: 'Login successfully',
+          showConfirmButton: false,
+          timer: 1500
+
+      })
+        navigate(from, { replace: true });
+      
       })
       .catch((err) => {
         console.log(err);

@@ -8,6 +8,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../../provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const SignUp = () => {
   const [show, setShow] = useState(false);
@@ -16,7 +17,8 @@ const SignUp = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState: { errors, },
   } = useForm();
 
 
@@ -48,8 +50,10 @@ const SignUp = () => {
                 .then((res) => res.json())
                 .then((data) => {
                   if (data.insertedId) {
+                    reset();
                     toast("User create Successfully!");
                     navigate('/')
+                   
                   }
                 });
             })
@@ -62,9 +66,9 @@ const SignUp = () => {
   };
   return (
     <>
-      {/* <Helmet>
-        <title>| Register</title>
-      </Helmet> */}
+      <Helmet>
+        <title>Sport Easy| Register</title>
+      </Helmet>
       <div  className="hero min-h-screen py-10">
         <div className="hero-content flex-col w-full">
           <div className="text-center lg:text-left">
