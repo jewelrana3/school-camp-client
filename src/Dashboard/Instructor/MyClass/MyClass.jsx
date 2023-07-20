@@ -62,7 +62,7 @@ const MyClass = () => {
                   <Link to={`/dashboard/feadback/${item._id}`}>
                     <button
                       type="text"
-                      className="bg-sky-600 hover:bg-sky-800 text-white font-bold py-2 px-4 rounded"
+                      className="bg-sky-600 hover:bg-sky-800 text-white font-bold rounded"
                     >
                       feadback
                     </button>

@@ -64,7 +64,7 @@ const Login = () => {
           </label>
           <input
             type="email"
-            {...register("email", { required: true })}
+            {...register("email", { required:true })}
             name="email"
             placeholder="email"
             className="input input-bordered w-full"

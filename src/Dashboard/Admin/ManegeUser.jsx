@@ -87,7 +87,6 @@ const ManegeUser = () => {
       </Helmet>
       <SetPageTitle
         title="Manage Users"
-        desc="Experience top-notch instruction from our popular instructors, known for their dynamic teaching style and extensive knowledge sports."
       ></SetPageTitle>
       <div className="overflow-x-auto w-full">
       <Fade delay={1e2} cascade damping={1e-1}>
@@ -125,7 +124,7 @@ const ManegeUser = () => {
                     onClick={() => handleMakeInstructor(item._id)}
                     disabled={item.role === 'student' ? false : true}
                     type="submit"
-                    className="bg-blue-500 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded"
+                    className="bg-blue-500 hover:bg-blue-800 text-white font-bold rounded"
                   >
                     make instructor
                   </button>
@@ -135,7 +134,7 @@ const ManegeUser = () => {
                     onClick={() => handleMakeAdmin(item._id)}
                     type="submit"
                     disabled={item.role === 'student' || item.role === 'instructor' ?  false :true}
-                    className="bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded items-center"
+                    className="bg-purple-500 hover:bg-purple-800 text-white font-bold rounded items-center"
                   >
                     make admin
                   </button>

@@ -134,7 +134,7 @@ const ManegeClass = () => {
                           : false
                       }
                       type="text"
-                      className={`bg-blue-500  text-white font-bold py-2 px-4 rounded`}
+                      className={`bg-blue-500  text-white font-bold  rounded`}
                     >
                       Approve
                     </button>
@@ -148,7 +148,7 @@ const ManegeClass = () => {
                           : false
                       }
                       type="text"
-                      className="bg-purple-500 text-white font-bold py-2 px-4 rounded"
+                      className="bg-purple-500 text-white font-bold rounded"
                     >
                       Deny
                     </button>
@@ -158,7 +158,7 @@ const ManegeClass = () => {
                       <button
                         onClick={() => handleFeadBack(item._id)}
                         type="text"
-                        className="bg-sky-600 hover:bg-sky-800 text-white font-bold py-2 px-4 rounded"
+                        className="bg-sky-600 hover:bg-sky-800 text-white font-bold  rounded"
                       >
                         feadback
                       </button>
