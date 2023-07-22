@@ -34,7 +34,7 @@ const Navber = ({ color, setColor }) => {
                 <Link to="/">Home</Link>
             </li>
             <li className="text-white">
-                <Link to="/instructor">Instructors</Link>
+                <Link to="/All-instructor">Instructor</Link>
             </li>
             <li className="text-white">
                 <Link to="/classes">Classes</Link>

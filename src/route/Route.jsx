@@ -58,7 +58,7 @@ const router = createBrowserRouter([
             {
                 path:'All-instructor',
                 element:<InstructorAll></InstructorAll>,
-                loader:()=> fetch('https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/instructor')
+                // loader:()=> fetch('https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/instructorAll')
             
             },
             {

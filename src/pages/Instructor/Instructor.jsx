@@ -21,6 +21,7 @@ const customAnimation = keyframes`
 `;
 
 const Instructor = () => {
+ 
    const [instructor,setInstructor] = useState([])
 
    useEffect(()=>{

@@ -1,12 +1,20 @@
 import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
+import useInstructor from "../../hooks/useInstructor";
+import { useEffect, useState } from "react";
 
 
 const InstructorAll = () => {
+    const [popular, setPopular] = useState([])
 
-    const instructor = useLoaderData();
-  
+    useEffect(() => {
+        fetch('https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/instructor')
+            .then(res => res.json())
+            .then(data => {
+               setPopular(data)
+            })
+    }, [])
     return (
         <>
             <Helmet>
@@ -16,7 +24,7 @@ const InstructorAll = () => {
                 <div className="pt-40 mb-12">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {
-                            instructor?.map(item => <div style={{ width: '23rem' }} key={item._id} className="card card-compact w-96 bg-base-100 shadow-xl">
+                            popular?.map(item => <div style={{ width: '23rem' }} key={item._id} className="card card-compact w-96 bg-base-100 shadow-xl">
 
                                 <figure><img src={item.image} alt="Shoes" /></figure>
 
