@@ -35,9 +35,9 @@ const Login = () => {
           showConfirmButton: false,
           timer: 1500
 
-      })
+        })
         navigate(from, { replace: true });
-      
+
       })
       .catch((err) => {
         console.log(err);
@@ -49,70 +49,70 @@ const Login = () => {
       <Helmet>
         <title>Sport Easy | Login</title>
       </Helmet>
- <div className="hero py-10">
-  <div className="hero-content flex-col w-full">
-    <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold mb-5 text-orange-600">
-        Please Login!
-      </h1>
-    </div>
-    <div className="card flex-shrink-0 w-full max-w-md bg-slate-100">
-      <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Email*</span>
-          </label>
-          <input
-            type="email"
-            {...register("email", { required:true })}
-            name="email"
-            placeholder="email"
-            className="input input-bordered w-full"
-          />
-          {errors.email && <span className="text-red-600">required</span>}
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Password*</span>
-          </label>
-          <div className="flex items-center ">
-            <input
-              type={show ? "text" : "password"}
-              {...register("password", {
-                required: true,
-              })}
-              placeholder="password"
-              className="input input-bordered w-full"
-            />
-            <span
-              className="absolute right-10 p-2 cursor-pointer mr-2"
-              onClick={() => setShow(!show)}
-            >
-              {show ? <FaEye /> : <FaEyeSlash />}
-            </span>
+      <div className="hero pr-6">
+        <div className="hero-content flex-col ">
+          <div className="text-center lg:text-left">
+            <h1 className="text-5xl font-bold  text-orange-600">
+              Please Login!
+            </h1>
           </div>
+          <div className="card flex-shrink-0 w-full max-w-sm bg-slate-100 ">
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+              <div className="form-control -mb-8">
+                <label className="label">
+                  <span className="label-text">Email*</span>
+                </label>
+                <input
+                  type="email"
+                  {...register("email", { required: true })}
+                  name="email"
+                  placeholder="email"
+                  className="input input-bordered w-full"
+                />
+                {errors.email && <span className="text-red-600">required</span>}
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Password*</span>
+                </label>
+                <div className="flex items-center -mb-6">
+                  <input
+                    type={show ? "text" : "password"}
+                    {...register("password", {
+                      required: true,
+                    })}
+                    placeholder="password"
+                    className="input input-bordered w-full"
+                  />
+                  <span
+                    className="absolute right-10 p-2 cursor-pointer mr-2"
+                    onClick={() => setShow(!show)}
+                  >
+                    {show ? <FaEye /> : <FaEyeSlash />}
+                  </span>
+                </div>
 
+              </div>
+              <div className="form-control mt-6 -mb-20">
+                <input style={{ width: '380px' }}
+                  className="btn btn-primary"
+                  type="submit"
+                  value="Login"
+                />
+              </div>
+            </form>
+            <div className="text-center ">
+              <p className="-mb-4">
+                New to this site! Please{" "}
+                <Link to="/signup" className="hover:underline text-blue-500">
+                  Register
+                </Link>
+              </p>
+              <SocialLogin></SocialLogin>
+            </div>
+          </div>
         </div>
-        <div className="form-control mt-6">
-          <input style={{width:'400px'}}
-            className="btn btn-primary"
-            type="submit"
-            value="Login"
-          />
-        </div>
-      </form>
-      <div className="text-center mb-10">
-        <p>
-          New to this site! Please{" "}
-          <Link to="/signup" className="hover:underline text-blue-500">
-            Register
-          </Link>
-        </p>
-        <SocialLogin></SocialLogin>
       </div>
-    </div>
-  </div>
-</div>
     </>
   );
 };

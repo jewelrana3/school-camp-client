@@ -92,7 +92,7 @@ const Navber = ({ color, setColor }) => {
             </div>
             <div className="drawer-side z-50">
                 <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-                <ul className="menu p-4 w-80  h-full bg-slate-400 ">
+                <ul className="menu p-4 w-40 rounded h-80% bg-slate-400 ">
                     {/* Sidebar content here */}
                     {navItem}
                 </ul>
