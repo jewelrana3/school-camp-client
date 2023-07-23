@@ -40,7 +40,7 @@
 //                 image : data.photoURL,
 //                 role: "student",
 //               };
-//               fetch("https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/users", {
+//               fetch("http://localhost:4000/users", {
 //                 method: "POST",
 //                 headers: {
 //                   "content-type": "application/json",
@@ -216,7 +216,7 @@ import { Helmet } from "react-helmet-async";
 
 const SignUp = () => {
   const [show, setShow] = useState(false);
-  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const { createUser, profileUser } = useContext(AuthContext);
   const navigate = useNavigate()
   const {
     register,
@@ -235,7 +235,7 @@ const SignUp = () => {
     createUser(data.email, data.password)
       .then((result) => {
         if (result.user) {
-          updateUserProfile(data.name, data.photoURL)
+          profileUser(data.name, data.photoURL)
             .then(() => {
               const user = {
                 name: data.name,
@@ -243,7 +243,7 @@ const SignUp = () => {
                 image: data.photoURL,
                 role: "student",
               };
-              fetch("https://summer-school-camp-server-nine.vercel.app/users", {
+              fetch("http://localhost:4000/users", {
                 method: "POST",
                 headers: {
                   "content-type": "application/json",
@@ -264,9 +264,9 @@ const SignUp = () => {
             });
         }
       })
-      .catch((err) => {
-        toast.error(err.message);
-      });
+      .catch((err)=>{
+        console.log(err.message)
+      })
   };
   return (
     <>

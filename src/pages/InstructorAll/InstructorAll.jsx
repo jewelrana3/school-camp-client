@@ -9,7 +9,7 @@ const InstructorAll = () => {
     const [popular, setPopular] = useState([])
 
     useEffect(() => {
-        fetch('https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/instructor')
+        fetch('http://localhost:4000/instructor')
             .then(res => res.json())
             .then(data => {
                setPopular(data)
@@ -31,9 +31,7 @@ const InstructorAll = () => {
                                 <div className="card-body">
                                     <h2 className="card-title"> {item.name}</h2>
                                     <p>{item.email}</p>
-                                    <p>Teaching: {item.title}</p>
-                                    <p>Student: {item.students}</p>
-                                    <p>Number of class Token:{item.class}</p>
+                                   
 
                                 </div>
                             </div>)

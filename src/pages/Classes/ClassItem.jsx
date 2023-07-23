@@ -31,7 +31,7 @@ const ClassItem = ({ item }) => {
         console.log(item)
         if (user && user?.email) {
             const navItem = { classesId: _id, name, instructor, image, amount, email: user?.email }
-            fetch(`https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/carts`,{
+            fetch(`http://localhost:4000/carts`,{
                 method: 'POST',
                 headers:
                 {
