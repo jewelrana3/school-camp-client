@@ -5,7 +5,7 @@ const usePayment = () => {
     const [payment,setPayment] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:4000/payment')
+        fetch('https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/payment')
             .then(res => res.json())
             .then(data => {
                 setPayment(data)
