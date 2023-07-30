@@ -22,5 +22,13 @@
 }
 body{
   overflow-x:hidden;
-  /* overflow-y :hidden; */
+  
+}
+
+.control-arrow{
+display: none;
+
+}
+.carousel-status{
+  display: none;
 }

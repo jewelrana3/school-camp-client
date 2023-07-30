@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
 import useCart from "../../../hooks/useCart";
-import { FaMoon, FaCentos } from 'react-icons/fa';
+import {FaMoon } from 'react-icons/fa';
+
 
 
 const Navber = ({ color, setColor }) => {
@@ -10,6 +11,7 @@ const Navber = ({ color, setColor }) => {
     const [cart] = useCart();
 
     const handleColor = () => {
+       
 
         if (color == "light") {
             setColor("dark")
@@ -23,14 +25,13 @@ const Navber = ({ color, setColor }) => {
 
     const handleLogOut = () => {
         logOut()
-            .then(() => { })
             .then(error => console.log(error))
     }
 
     const navItem =
         <>
-         
-          <li className="text-white">
+            <li onClick={()=>handleColor(setColor(!color))}><Link><FaMoon/></Link></li>
+            <li className="text-white">
                 <Link to="/">Home</Link>
             </li>
             <li className="text-white">
@@ -42,15 +43,15 @@ const Navber = ({ color, setColor }) => {
             <li className="text-white">
                 <Link to="/dashboard">Dashboard </Link>
             </li>
-          
+
             {user ? <div className="flex flex-col md:flex-row md:items-center mt-5 md:mt-0" ><span className="tooltip" data-tip={user?.displayName}><img className="w-12 h-12 mb-2 md:mb-0 cursor-pointer bg-cover bg-center mx-4 rounded-full" src={user?.photoURL} alt="" /></span><button onClick={handleLogOut} className="btn btn-outline btn-sm mb-2 text-white">Log Out</button></div> : <Link to='/login'>
                 <button className="btn btn-outline btn-sm text-white mb-2">login</button>
             </Link>}
         </>
-    
+
     return (
-     
-        <div className="drawer">
+
+        <div className="drawer z-10">
             <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col">
                 {/* Navbar */}

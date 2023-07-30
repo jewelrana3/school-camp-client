@@ -4,11 +4,13 @@ import { useForm } from "react-hook-form";
 // import { Helmet } from "react-helmet-async";
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { toast } from "react-toastify";
+
 import { AuthContext } from "../../provider/AuthProvider";
 import SocialLogin from "../shared/SocialLogin/SocialLogin";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
+import { toast } from "react-hot-toast";
+
 
 
 const Login = () => {
@@ -28,14 +30,15 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         reset();
-        Swal.fire({
-          position: 'top-center',
-          icon: 'success',
-          title: 'Login successfully',
-          showConfirmButton: false,
-          timer: 1500
+        toast.success('login successfully')
+        // Swal.fire({
+        //   position: 'top-center',
+        //   icon: 'success',
+        //   title: 'Login successfully',
+        //   showConfirmButton: false,
+        //   timer: 1500
 
-        })
+        // })
         navigate(from, { replace: true });
 
       })
