@@ -134,7 +134,7 @@ const ManegeUser = () => {
                     onClick={() => handleMakeAdmin(item._id)}
                     type="submit"
                     disabled={item.role === 'student' || item.role === 'instructor'  ?  false :true }
-                    className="bg-purple-500 hover:bg-purple-800 text-white font-bold rounded items-center"
+                    className="bg-purple-500 hover:bg-purple-800 text-white font-bold rounded items-center "
                   >
                     make admin
                   </button>

@@ -36,7 +36,7 @@ const Instructor = () => {
     return (
         <div className="mb-12">
             <div className="text-center mb-16 px-3 pr-11 pt-32">
-               <TitleHeader title='Instructor ' sub='Class' des='The Intructor Classes Men of Best Side Course Instructor'></TitleHeader>
+               <TitleHeader title='Instructor ' sub='' des='The Intructor  Men of Best Side Course Instructor'></TitleHeader>
             
             </div>
 
