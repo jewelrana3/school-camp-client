@@ -26,6 +26,8 @@ import DashBoardHome from "../Dashboard/DashboardHome/DashboardHome";
 import FeadBack from "../Dashboard/Admin/FeadBack";
 import InstructorRoute from "./InstructorRoute";
 import AdminRoute from "./AdminRoute";
+import Blog from "../pages/Blog/Blog";
+import Gallary from "../pages/Gallary/Gallary";
 
 
 
@@ -54,6 +56,14 @@ const router = createBrowserRouter([
                 path:'instructor',
                 element:<Instructor></Instructor>,
               
+            },
+            {
+                path:'blog',
+                element:<Blog></Blog>
+            },
+            {
+                path:'gallary',
+                element:<Gallary></Gallary>
             },
             {
                 path:'All-instructor',

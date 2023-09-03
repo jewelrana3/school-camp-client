@@ -38,6 +38,9 @@ const Navber = ({ color, setColor }) => {
                 <Link to="/All-instructor">Instructor</Link>
             </li>
             <li className="text-white">
+                <Link to="/gallary">Gallary</Link>
+            </li>
+            <li className="text-white">
                 <Link to="/classes">Classes</Link>
             </li>
             <li className="text-white">
