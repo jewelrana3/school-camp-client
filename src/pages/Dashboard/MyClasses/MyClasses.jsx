@@ -15,15 +15,15 @@ const MyClasses = () => {
         <title>Sports Easy - Dashboard - My Inroll Class</title>
       </Helmet>
       <SetPageTitle title='My Enroll Classes'></SetPageTitle> 
-      <div className="grid md:grid-cols-2 gap-6 my-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10 image">
         {
-          item.map(item => <div key={item._id} className="card card-side h-64 bg-base-100 shadow-xl">
-            <figure className="w-1/2"><img src={item?.image} alt="Movie" /></figure>
+          item.map(item => <div key={item._id} className="card card-side  bg-base-100 shadow-xl">
+            <figure className="lg:w-1/2 "><img src={item?.image} alt="Movie" /></figure>
             <div className="card-body w-1/2">
               <h2 className="card-title">{item.itemsName[0]}</h2>
               <p>Instructor : {item.instructor}</p>
-              <div className="card-actions justify-end">
-                <button onClick={() => Swal.fire('this button is not working right now!')} className="btn btn-primary">Continue Learning</button>
+              <div className="card-actions justify-end ">
+                <button onClick={() => Swal.fire('this button is not working right now!')} className="btn btn-primary continue">Continue Learning</button>
               </div>
             </div>
           </div>)

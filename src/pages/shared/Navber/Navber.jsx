@@ -41,6 +41,9 @@ const Navber = ({ color, setColor }) => {
                 <Link to="/gallary">Gallary</Link>
             </li>
             <li className="text-white">
+                <Link to="/about">About</Link>
+            </li>
+            <li className="text-white">
                 <Link to="/classes">Classes</Link>
             </li>
             <li className="text-white">

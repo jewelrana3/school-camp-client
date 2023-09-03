@@ -33,7 +33,32 @@ display: none;
   display: none;
 }
 
-/* Blog section */
-/* .blog-tag p{
-  font-family: 'Raleway', sans-serif;
-} */
+/* Team section */
+.team:hover{
+  background-color: darkblue;
+  opacity: .8;
+}
+
+/* media sreen */
+@media (max-width:600px) {
+  .card-actions .continue{
+    margin-top: 130px;
+  
+  }
+  .image img{
+    width: 100%;
+  }
+}
+@media (max-width:400px) {
+ 
+  .input-header .ptag{
+    margin-top: 20px;
+  }
+  .contact-form form textarea{
+    width:100%;
+  }
+ .card-actions .continue{
+    margin-top: 100px;
+  
+  }
+}

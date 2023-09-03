@@ -28,6 +28,9 @@ import InstructorRoute from "./InstructorRoute";
 import AdminRoute from "./AdminRoute";
 import Blog from "../pages/Blog/Blog";
 import Gallary from "../pages/Gallary/Gallary";
+import Contact from "../pages/Contact/Contact";
+import Team from "../pages/Team/Team";
+import About from "../pages/About/About";
 
 
 
@@ -62,8 +65,20 @@ const router = createBrowserRouter([
                 element:<Blog></Blog>
             },
             {
+                path:'contact',
+                element:<Contact></Contact>
+            },
+            {
                 path:'gallary',
                 element:<Gallary></Gallary>
+            },
+            {
+                path:'team',
+                element:<Team></Team>
+            },
+            {
+                path:'about',
+                element:<About></About>
             },
             {
                 path:'All-instructor',
