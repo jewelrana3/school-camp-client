@@ -5,6 +5,9 @@ import Banner from "../Banner/Banner";
 import PopularClass from "../PopularClass/PopularClass";
 import Blog from "../../Blog/Blog";
 import Team from "../../Team/Team";
+import About from "../../About/About";
+import Gallary from "../../Gallary/Gallary";
+import Photo from "../../Photo/Photo";
 
 
 const Home = () => {
@@ -20,6 +23,8 @@ const Home = () => {
             <Image></Image>
             <About></About>
             <Team></Team>
+            <Gallary></Gallary>
+            <Photo></Photo>
         </div>
     )
 };

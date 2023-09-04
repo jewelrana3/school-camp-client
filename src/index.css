@@ -3,62 +3,98 @@
 @tailwind utilities;
 
 .drawer-side a.active {
-    color: rgb(145, 87, 32);
-    border-bottom: 4px solid darkgreen;
-  }
-  .drawer-side a {
-    background-color: transparent;
-  }
-
-  .navItem a.active {
-    background-color: rgb(87, 94, 13);
-    
-  }
-
-  
-
-  .thumbs{
-    display: none;
-}
-body{
-  overflow-x:hidden;
-  
+  color: rgb(145, 87, 32);
+  border-bottom: 4px solid darkgreen;
 }
 
-.control-arrow{
-display: none;
+.drawer-side a {
+  background-color: transparent;
+}
+
+.navItem a.active {
+  background-color: rgb(87, 94, 13);
 
 }
-.carousel-status{
+
+
+
+.thumbs {
+  display: none;
+}
+
+body {
+  overflow-x: hidden;
+
+}
+
+.control-arrow {
+  display: none;
+
+}
+
+.carousel-status {
   display: none;
 }
 
 /* Team section */
-.team:hover{
+.team:hover {
   background-color: darkblue;
   opacity: .8;
 }
 
+/* about section */
+.about-image:hover {
+  background: rgb(11, 10, 10);
+  opacity: .7;
+  color: white;
+}
+
 /* media sreen */
-@media (max-width:600px) {
-  .card-actions .continue{
-    margin-top: 130px;
+@media (max-width:1400px) {
   
+  .input-type button{
+   margin-left: 240px;
+   height: 48px;
   }
-  .image img{
+}
+
+@media (max-width:600px) {
+  .card-actions .continue {
+    margin-top: 130px;
+
+  }
+
+  .image img {
     width: 100%;
   }
 }
+
+.photo input {
+  width: auto;
+}
+
+.photo .news {
+  text-align: center;
+}
+
+@media (max-width:500px) {
+  .input-type input{
+  width: 300px;
+  }
+}
+
 @media (max-width:400px) {
- 
-  .input-header .ptag{
+
+  .input-header .ptag {
     margin-top: 20px;
   }
-  .contact-form form textarea{
-    width:100%;
+
+  .contact-form form textarea {
+    width: 100%;
   }
- .card-actions .continue{
+
+  .card-actions .continue {
     margin-top: 100px;
-  
+
   }
 }

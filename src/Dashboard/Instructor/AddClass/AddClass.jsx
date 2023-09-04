@@ -41,6 +41,7 @@ const AddClass = () => {
                 })
                     .then((res) => res.json())
                     .then((imageResponse) => {
+                        console.log(imageResponse)
                         const imageURL = imageResponse.data.display_url;
                         const classData = {
 

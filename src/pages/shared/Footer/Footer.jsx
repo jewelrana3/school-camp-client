@@ -11,8 +11,8 @@ const Footer = () => {
           <img style={{ borderRadius: '50px' }} className="w-12" src="https://i.ibb.co/chxbvxW/Untitled2.png" alt="photo" />
 
           <div className="text-lg md:text-xl lg:text-2xl font-semibold">
-            <span className="text-orange-600"> Sports Easy</span>
-            <span className="text-blue-600 ml-3">Masic</span>
+            <span className="text-orange-600"> Sports Foregin </span>
+            <span className="text-blue-600 ml-3">Team</span>
             <div className='text-xs md:text-lg'>
               Online Sports Player Studio Institute
             </div>

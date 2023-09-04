@@ -32,6 +32,8 @@ import Contact from "../pages/Contact/Contact";
 import Team from "../pages/Team/Team";
 import About from "../pages/About/About";
 
+import Photo from "../pages/Photo/Photo";
+
 
 
 
@@ -93,6 +95,10 @@ const router = createBrowserRouter([
             {
                 path:'image',
                 element:<Image></Image>
+            },
+            {
+                path:'photo',
+                element:<Photo></Photo>
             }
         ]
     },
