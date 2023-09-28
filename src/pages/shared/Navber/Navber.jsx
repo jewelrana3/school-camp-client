@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
 import useCart from "../../../hooks/useCart";
 import {FaMoon } from 'react-icons/fa';
+import { MdOutlineLightMode } from 'react-icons/md';
 
 
 
@@ -30,7 +31,7 @@ const Navber = ({ color, setColor }) => {
 
     const navItem =
         <>
-            <li onClick={()=>handleColor(setColor(!color))}><Link><FaMoon/></Link></li>
+            <li onClick={()=>handleColor(setColor(color))}><span>{<MdOutlineLightMode className="text-2xl"/>}</span></li>
             <li className="text-white">
                 <Link to="/">Home</Link>
             </li>
@@ -42,9 +43,6 @@ const Navber = ({ color, setColor }) => {
                 <Link to="/classes">Classes</Link>
             </li>
            
-            <li className="text-white">
-                <Link to="/photo">Photo</Link>
-            </li>
             <li className="text-white">
                 <Link to="/dashboard">Dashboard </Link>
             </li>
