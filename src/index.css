@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* classItem css */
+.confirmButton{
+  background-color: brown;
+}
+
+
 .drawer-side a.active {
   color: rgb(145, 87, 32);
   border-bottom: 4px solid darkgreen;

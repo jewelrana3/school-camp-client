@@ -24,14 +24,14 @@ const ClassItem = ({ item }) => {
         } Dashboard
     }), [])
 
- 
+
 
     const addToCart = item => {
 
         console.log(item)
         if (user && user?.email) {
             const navItem = { classesId: _id, name, instructor, image, amount, email: user?.email }
-            fetch(`https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/carts`,{
+            fetch(`https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/carts`, {
                 method: 'POST',
                 headers:
                 {
@@ -46,7 +46,7 @@ const ClassItem = ({ item }) => {
                         navigate('/dashboard/selectclass')
                         refetch();
                         Swal.fire({
-                            position: 'top-end',
+                            position: 'center',
                             icon: 'success',
                             title: 'Your work has been saved',
                             showConfirmButton: false,
@@ -54,15 +54,15 @@ const ClassItem = ({ item }) => {
                         })
                     }
                 })
-                if(data.message){
-                    Swal.fire({
-                      position: 'top-end',
-                      icon: 'error',
-                      title: "Already Select this course. check your dashboard!",
-                      showConfirmButton: false,
-                      timer: 1500
-                    })
-                  }
+            if (data.message) {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: "Already Select this course. check your dashboard!",
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
         } else {
             Swal.fire({
                 title: 'Are you sure?',
@@ -71,7 +71,11 @@ const ClassItem = ({ item }) => {
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Login Now!'
+                confirmButtonText: 'Login Now!',
+                customClass: {
+                    confirmButton: 'btn btn-red',
+                    cancelButton:'btn btn-blue' // Add a custom class for the Confirm button
+                }
             }).then((result) => {
                 if (result.isConfirmed) {
                     navigate('/login')
