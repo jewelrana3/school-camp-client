@@ -8,10 +8,10 @@ const PopularClass = () => {
     const [popular, setPopular] = useState([])
 
     useEffect(() => {
-        fetch('https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/popular')
+        fetch('https://school-camp-server-rouge.vercel.app/popular')
             .then(res => res.json())
             .then(data => {
-               
+               console.log(data,'dddd')
                 const itemsName = data.filter(item => item.category === 'ball')
                 setPopular(itemsName)
             })

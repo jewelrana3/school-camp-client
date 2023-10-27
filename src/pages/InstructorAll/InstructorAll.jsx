@@ -9,9 +9,10 @@ const InstructorAll = () => {
     const [popular, setPopular] = useState([])
 
     useEffect(() => {
-        fetch('https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/instructor')
+        fetch('https://school-camp-server-rouge.vercel.app/instructor')
             .then(res => res.json())
             .then(data => {
+                console.log('dddd',data)
                setPopular(data)
             })
     }, [])
