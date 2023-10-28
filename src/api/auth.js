@@ -5,7 +5,7 @@
 //     const currentUser = {
 //         email:user.email,
 //     }
-//     fetch(`https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/users/${user?.email}`,{
+//     fetch(`https://school-camp-server-rouge.vercel.app/users/${user?.email}`,{
 //         method:'PUT',   
 //         headers:{
 //             'content-type':'application/json'

@@ -22,7 +22,7 @@ const ManegeUser = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.patch(`https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/makeInstructor/${id}`, {
+        axios.patch(`https://school-camp-server-rouge.vercel.app/makeInstructor/${id}`, {
           // Request data
         }, {
           headers: {
@@ -56,7 +56,7 @@ const ManegeUser = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.patch(`https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/makeAdmin/${id}`, {
+        axios.patch(`https://school-camp-server-rouge.vercel.app/makeAdmin/${id}`, {
           // Request data
         }, {
           headers: {

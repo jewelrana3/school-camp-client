@@ -5,7 +5,7 @@ import useAuth from './useAuth';
 
 
 const axiosSecure = axios.create({
-  baseURL: 'https://b7a12-summer-camp-server-side-jewelrana3.vercel.app', 
+  baseURL: 'https://school-camp-server-rouge.vercel.app/', 
 });
 
 const useAxiosSecure = () => {

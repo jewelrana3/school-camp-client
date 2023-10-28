@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import useAuth from "../../../../hooks/useAuth";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import './CheakOut.css'
-import moment from "moment/moment";
 import { Navigate, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -24,7 +23,6 @@ const CheakOut = ({ price, cart,image,instructor }) => {
         if (price > 0) {
             axiosSecure.post('/create-payment-intent', { price })
                 .then(res => {
-
                     setClientSecret(res.data.clientSecret)
                 })
         }

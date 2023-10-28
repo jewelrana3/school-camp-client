@@ -13,15 +13,19 @@ const SelectClass = () => {
     const handleDelete = (item) => {
         Swal.fire({
             title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            text: "You won't be able to revert !",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
+            confirmButtonText: 'Yes, delete it!',
+            customClass: {
+                confirmButton: 'btn btn-red',
+                cancelButton:'btn btn-blue' 
+            }
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/carts/${item._id}`, {
+                fetch(`https://school-camp-server-rouge.vercel.app/carts/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

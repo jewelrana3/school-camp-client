@@ -21,7 +21,7 @@ const ManegeClass = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.patch(`https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/approved/${id}`, {
+        axios.patch(`https://school-camp-server-rouge.vercel.app/approved/${id}`, {
           // Request data
         }, {
           headers: {
@@ -52,7 +52,7 @@ const ManegeClass = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.patch(`https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/denied/${id}`, {
+        axios.patch(`https://school-camp-server-rouge.vercel.app/denied/${id}`, {
           // Request data
         }, {
           headers: {

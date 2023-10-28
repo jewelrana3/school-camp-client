@@ -85,7 +85,7 @@ const router = createBrowserRouter([
             {
                 path:'All-instructor',
                 element:<InstructorAll></InstructorAll>,
-                // loader:()=> fetch('https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/instructorAll')
+                // loader:()=> fetch('https://school-camp-server-rouge.vercel.app/instructorAll')
             
             },
             {
@@ -119,7 +119,7 @@ const router = createBrowserRouter([
             {
                 path:'inrollclass/:id',
                 element:<EnrolledClass></EnrolledClass>,
-                loader:({params}) => fetch(`https://b7a12-summer-camp-server-side-jewelrana3.vercel.app/popular/${params.id}`)
+                loader:({params}) => fetch(`https://school-camp-server-rouge.vercel.app/popular/${params.id}`)
             },
             {
                 path:'myclass',
