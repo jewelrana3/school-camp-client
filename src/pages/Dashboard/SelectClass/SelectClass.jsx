@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet-async";
 
 const SelectClass = () => {
     const [cart, refetch] = useCart();
-    console.log(cart)
+    (cart)
 
     const handleDelete = (item) => {
         Swal.fire({
@@ -21,7 +21,8 @@ const SelectClass = () => {
             confirmButtonText: 'Yes, delete it!',
             customClass: {
                 confirmButton: 'btn btn-red',
-                cancelButton:'btn btn-blue' 
+                cancelButton:'btn btn-blue',
+                showCancelButton:'btn btn-blue' 
             }
         }).then((result) => {
             if (result.isConfirmed) {
@@ -32,12 +33,14 @@ const SelectClass = () => {
                     .then(data => {
                         if (data.deletedCount > 0) {
                             refetch();
-                            Swal.fire(
-                                'Deleted!',
-                                'Your file has been deleted.',
-                                'success'
-                            )
+                            Swal.fire({
+                                title: 'Deleted!',
+                                text: 'Your file has been deleted.',
+                                icon: 'success',
+                                
+                            });
                         }
+                        
                     })
             }
         })

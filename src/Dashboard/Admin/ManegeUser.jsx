@@ -10,7 +10,7 @@ import useUser from "../../hooks/useUser";
 const ManegeUser = () => {
   const [users, , refetch] = useUser();
   // const alluser = users.filter((item) => item.role === "student");
-  // console.log(alluser);
+  // (alluser);
 
   const handleMakeInstructor = (id) => {
     Swal.fire({

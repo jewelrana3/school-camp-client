@@ -28,7 +28,7 @@ const ClassItem = ({ item }) => {
 
     const addToCart = item => {
 
-        console.log(item)
+        (item)
         if (user && user?.email) {
             const navItem = { classesId: _id, name, instructor, image, amount, email: user?.email }
             fetch(`https://school-camp-server-rouge.vercel.app/carts`, {

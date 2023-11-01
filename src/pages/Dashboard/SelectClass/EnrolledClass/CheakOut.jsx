@@ -47,7 +47,7 @@ const CheakOut = ({ price, cart,image,instructor }) => {
             setError(error.message)
         } else {
             setError('')
-            // console.log('payment Method', paymentMethod)
+            // ('payment Method', paymentMethod)
         }
         setProccess(true)
 
@@ -63,9 +63,9 @@ const CheakOut = ({ price, cart,image,instructor }) => {
         }
         )
         if (confirmError) {
-            console.log(confirmError)
+            (confirmError)
         }
-        console.log('payment intent', paymentIntent)
+        ('payment intent', paymentIntent)
         setProccess(false)
         if (paymentIntent.status === "succeeded") {
             setTransactionId(paymentIntent.id)

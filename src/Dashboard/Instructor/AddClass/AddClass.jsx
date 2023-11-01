@@ -41,7 +41,7 @@ const AddClass = () => {
                 })
                     .then((res) => res.json())
                     .then((imageResponse) => {
-                        console.log(imageResponse)
+                        (imageResponse)
                         const imageURL = imageResponse.data.display_url;
                         const classData = {
 
@@ -56,7 +56,7 @@ const AddClass = () => {
                             enrolled: 0,
                         };
                         axiosSecure.post("/addClass", classData).then((data) => {
-                            console.log(data.data.insertedId);
+                            (data.data.insertedId);
                             if (data) {
                                 Swal.fire({
                                     position: "top-end",

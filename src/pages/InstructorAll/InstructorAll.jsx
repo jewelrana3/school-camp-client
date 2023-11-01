@@ -12,7 +12,7 @@ const InstructorAll = () => {
         fetch('https://school-camp-server-rouge.vercel.app/instructor')
             .then(res => res.json())
             .then(data => {
-                console.log('dddd',data)
+                ('dddd',data)
                setPopular(data)
             })
     }, [])

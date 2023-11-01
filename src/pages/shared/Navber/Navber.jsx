@@ -26,7 +26,7 @@ const Navber = ({ color, setColor }) => {
 
     const handleLogOut = () => {
         logOut()
-            .then(error => console.log(error))
+            .then(error => (error))
     }
 
     const navItem =

@@ -30,7 +30,7 @@ const SocialLogin = () => {
 
         })
         .catch((err) => {
-          console.log(err);
+          (err);
         }); 
   };
 

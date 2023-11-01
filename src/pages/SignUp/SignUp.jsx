@@ -28,7 +28,7 @@ const SignUp = () => {
       return;
     }
 
-    console.log(data);
+    (data);
     createUser(data.email, data.password)
       .then((result) => {
         if (result.user) {
@@ -49,7 +49,7 @@ const SignUp = () => {
               })
                 .then((res) => res.json())
                 .then((data) => {
-                  console.log("user saved", data);
+                  ("user saved", data);
                   if (data.insertedId) {
                     toast("User create Successfully!");
                     navigate('/')
@@ -57,12 +57,12 @@ const SignUp = () => {
                 });
             })
             .catch((err) => {
-              console.log(err);
+              (err);
             });
         }
       })
       .catch((err)=>{
-        console.log(err.message)
+        (err.message)
       })
   };
   return (

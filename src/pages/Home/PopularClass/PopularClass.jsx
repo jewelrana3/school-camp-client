@@ -11,7 +11,7 @@ const PopularClass = () => {
         fetch('https://school-camp-server-rouge.vercel.app/popular')
             .then(res => res.json())
             .then(data => {
-               console.log(data,'dddd')
+               (data,'dddd')
                 const itemsName = data.filter(item => item.category === 'ball')
                 setPopular(itemsName)
             })
